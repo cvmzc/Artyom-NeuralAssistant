@@ -1,0 +1,6 @@
+FROM rust:latest
+RUN USER=root cargo new --bin app
+WORKDIR /app
+COPY . .
+RUN cargo build --release
+RUN cargo install --path .
