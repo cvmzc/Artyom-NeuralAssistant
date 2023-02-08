@@ -17,15 +17,16 @@ import platform
 from loguru import logger
 from datetime import date
 from Alarm import Alarm
-from Timer.Timer import Timer
-from Stopwatch.Stopwatch import Stopwatch
+from Widgets.Timer.Timer import Timer
+from Widgets.Stopwatch.Stopwatch import Stopwatch
 from CommunicationNetwork import CommunicationNetwork
 if platform.system() == 'Windows':
     from win10toast import ToastNotifier
 from PIL import ImageGrab
 import asyncio
 import wikipedia
-
+import urllib.request
+from Widgets import CreateProjects
 # Инициализация параметров
 ProjectDir = os.path.dirname(os.path.realpath(__file__))
 UserDir = os.path.expanduser('~')
@@ -50,7 +51,9 @@ class Core:
     def __init__(self):
         self.owm = OWM('2221d769ed67828e858caaa3803161ea')
         self.Functions = {
-            'communication':self.CommunicationCommand,'weather':self.WeatherCommand
+            'communication':self.CommunicationCommand,'weather':self.WeatherCommand,
+            "c++_project":self.CppProject,"django_project":self.DjangoProject,"python_project":self.PythonProject,"NodeJS_project":self.NodeJSProject,
+            "rust_project":self.RustProject,"c_project":self.CProject,"go_project":self.GoProject,"java_project":self.JavaProject
         }
         self.model, _ = torch.hub.load(repo_or_dir='snakers4/silero-models',
                           model='silero_tts',
@@ -105,30 +108,62 @@ class Core:
         print("hello")
     
     async def WeatherCommand(self,command:str = "temperature"):
-        geolocation = geocoder.ip('me')
-        coordinates = geolocation.latlng
-        mgr = self.owm.geocoding_manager()
-        city = mgr.reverse_geocode(lat=coordinates[0], lon=coordinates[1])
-        mgr = self.owm.weather_manager()
-        observation = mgr.weather_at_place(city[0].name)  # the observation object is a box containing a weather object
-        weather = observation.weather
-        if command == 'temperature':
-            temp = int(weather.temperature('celsius')["temp"])
-            wind = weather.wind()["speed"]
-            wind = f"{wind} метров в секунду"
-            humidity = str(weather.humidity) + " процентов"
-            temp_str = await self.FilteringTransforms(f'Сейчас {temp} градуса',to_words=True)
-            print(temp_str)
-            await self.Tell(str(temp_str))
-
+        try:
+            urllib.request.urlopen("http://www.google.com")
+            self.Internet = True
+        except IOError:
+            self.Internet = False
+            self.Tell(random.choice(["К сожалению я не могу вам сказать прогноз погоды,так как отсутствует интернет.","Отсутствует подключение к интернету, поэтому я не могу сказать вам прогноз погоды."]))
+        if self.Internet == True:
+            geolocation = geocoder.ip('me')
+            coordinates = geolocation.latlng
+            mgr = self.owm.geocoding_manager()
+            city = mgr.reverse_geocode(lat=coordinates[0], lon=coordinates[1])
+            mgr = self.owm.weather_manager()
+            observation = mgr.weather_at_place(city[0].name)  # the observation object is a box containing a weather object
+            weather = observation.weather
+            if command == 'temperature':
+                temp = int(weather.temperature('celsius')["temp"])
+                wind = weather.wind()["speed"]
+                wind = f"{wind} метров в секунду"
+                humidity = str(weather.humidity) + " процентов"
+                temp_str = await self.FilteringTransforms(f'Сейчас {temp} градуса',to_words=True)
+                print(temp_str)
+                await self.Tell(str(temp_str))
     async def WikiCommand(self,text):
         wikipedia.summary(text)
 
     async def DjangoProject(self):
-        pass
+        ThreadProject = threading.Thread(target=CreateProjects.StartProject,args=("django_project"))
+        ThreadProject.start()
 
-    async def C_Plus_Plus_Project(self):
-        pass
+    async def CppProject(self):
+        ThreadProject = threading.Thread(target=CreateProjects.StartProject,args=("c++_project"))
+        ThreadProject.start()
+
+    async def RustProject(self):
+        ThreadProject = threading.Thread(target=CreateProjects.StartProject,args=("rust_project"))
+        ThreadProject.start()
+    
+    async def GoProject(self):
+        ThreadProject = threading.Thread(target=CreateProjects.StartProject,args=("go_project"))
+        ThreadProject.start()
+
+    async def NodeJSProject(self):
+        ThreadProject = threading.Thread(target=CreateProjects.StartProject,args=("NodeJS_project"))
+        ThreadProject.start()
+
+    async def CProject(self):
+        ThreadProject = threading.Thread(target=CreateProjects.StartProject,args=("c_project"))
+        ThreadProject.start()
+
+    async def JavaProject(self):
+        ThreadProject = threading.Thread(target=CreateProjects.StartProject,args=("java_project"))
+        ThreadProject.start()
+    
+    async def PythonProject(self):
+        ThreadProject = threading.Thread(target=CreateProjects.StartProject,args=("python_project"))
+        ThreadProject.start()
 
     async def CreateEchoBot(self):
         pass
@@ -137,6 +172,7 @@ class Core:
         # await self.Tell("Привет")
         await self.WeatherCommand()
         # await self.Functions["weather"]()
+        # await self.Functions[PredictedValue]()
 
 if __name__ == "__main__":
     AsyncioLoop = asyncio.get_event_loop()

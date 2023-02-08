@@ -504,7 +504,10 @@ class CreateProject(QWidget):
         else:
             sys.exit()
 
-if __name__ == '__main__':
+def StartWidget(type:str):
     app = QApplication(sys.argv)
-    Widgets = CreateProject(type="django_project")
+    Widgets = CreateProject(type=type)
     sys.exit(app.exec())
+
+if __name__ == '__main__':
+    StartWidget("django_project")
