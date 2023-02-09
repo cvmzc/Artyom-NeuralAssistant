@@ -26,7 +26,11 @@ from PIL import ImageGrab
 import asyncio
 import wikipedia
 import urllib.request
+import requests
+sys.path.append(os.path.join(os.path.dirname(os.path.realpath(__file__)),"Widgets"))
 from Widgets import CreateProjects
+from bs4 import BeautifulSoup
+
 # Инициализация параметров
 ProjectDir = os.path.dirname(os.path.realpath(__file__))
 UserDir = os.path.expanduser('~')
@@ -46,10 +50,15 @@ TransformsFile =  open(os.path.join(ProjectDir,'AssistantSettings/Transforms.jso
 Transforms = json.load(TransformsFile)
 TransformsFile.close()
 NAMES = ['Артём','Артемий','Артёша','Артемьюшка','Артя','Артюня','Артюха','Артюша','Артёмка','Артёмчик','Тёма']
+file = open(os.path.join(ProjectDir,'NeuralNetworkSettings/ArtyomAnswers.json'),'r',encoding='utf-8')
+ANSWERS  = json.load(file)
+file.close()
 
 class Core:
     def __init__(self):
         self.owm = OWM('2221d769ed67828e858caaa3803161ea')
+        self.NewsURL = "https://lenta.ru/"
+        self.NewsArray = []
         self.Functions = {
             'communication':self.CommunicationCommand,'weather':self.WeatherCommand,
             "c++_project":self.CppProject,"django_project":self.DjangoProject,"python_project":self.PythonProject,"NodeJS_project":self.NodeJSProject,
@@ -60,6 +69,8 @@ class Core:
                           language=LANGUAGE,
                           speaker=MODEL_ID)
         self.model.to(DEVICE)
+        self.timer = Timer()
+        self.stopwatch = Stopwatch()
     
     async def Tell(self,text):
         audio = self.model.apply_tts(text=text+"..",
@@ -106,14 +117,87 @@ class Core:
 
     async def CommunicationCommand(self):
         print("hello")
+
+    async def ExitCommand(self):
+        await self.Tell(random.choice(ANSWERS['exit']))
     
+    async def GratitudeCommand(self):
+        await self.Tell(random.choice(ANSWERS['gratitude']))
+    
+    async def VSCodeCommand(self):
+        if platform.system() == 'Windows':
+            if os.path.exists(os.path.join(UserDir,'/AppData/Local/Programs/Microsoft VS Code/Code.exe')):
+                await self.Tell(random.choice(ANSWERS['vscode']))
+                os.startfile(os.path.join(UserDir,'/AppData/Local/Programs/Microsoft VS Code/Code.exe'))
+            else:
+                await self.Tell(random.choice(['У вас не установлена эта программа','Редактор кода не установлен на этом компьютере','Программа не установлена на этом компьютере']))
+        elif platform.system() == 'Linux':
+            await self.Tell("Эта функция пока не доступна")
+        elif platform.system() == 'Darwin':
+            await self.Tell("Эта функция пока не доступна")
+
+    async def YoutubeCommand(self):
+        await self.Tell(random.choice(ANSWERS['youtube']))
+        webbrowser.open_new_tab('https://youtube.com')
+    
+    async def WebbrowserCommand(self):
+        await self.Tell(random.choice(ANSWERS['webbrowser']))
+        webbrowser.open_new_tab('https://google.com')
+
+    # Скриншот
+    async def ScreenShotCommand(self):
+        image = ImageGrab()
+        NameImage = "{}-{}.png".format(time.strftime('%H'),time.strftime('%M'))
+        if platform.system() == "Windows":
+            ImagePath = os.path.join(os.path.expanduser('~'),'Pictures','Screenshots')
+            image.save(NameImage, "PNG")
+        elif platform.system() == "Linux":
+            pass
+        elif platform.system() == "Darwin":
+            pass
+    
+    # Спящий режим
+    async def HibernationCommand(self):
+        if platform.system() == 'Windows':
+            await self.Tell(random.choice(ANSWERS['hibernation']))
+            os.system("rundll32.exe powrprof.dll,SetSuspendState 0,1,0")
+        elif platform.system() == 'Linux':
+            await self.Tell("Эта функция пока не доступна")
+        elif platform.system() == 'Darwin':
+            await self.Tell("Эта функция пока не доступна")
+
+    # Перезагрузка компьюетра
+    async def RebootCommand(self):
+        if platform.system() == 'Windows':
+            await self.Tell(random.choice(ANSWERS['reboot']))
+            os.system("shutdown -t 0 -r -f")
+        elif platform.system() == 'Linux':
+            await self.Tell("Эта функция пока не доступна")
+        elif platform.system() == 'Darwin':
+            await self.Tell("Эта функция пока не доступна")
+
+    # Выключение компьютера
+    async def ShutdownCommand(self):
+        if platform.system() == 'Windows':
+            await self.Tell(random.choice(ANSWERS['shutdown']))
+            os.system('shutdown /p /f')
+        elif platform.system() == 'Linux':
+            await self.Tell(random.choice(ANSWERS['shutdown']))
+            os.system("shutdown -h now")
+            # await self.Tell("Эта функция пока не доступна")
+        elif platform.system() == 'Darwin':
+            await self.Tell(random.choice(ANSWERS['shutdown']))
+            os.system("shutdown -h now")
+            # await self.Tell("Эта функция пока не доступна")
+
+    # Прогноз погоды
     async def WeatherCommand(self,command:str = "temperature"):
         try:
             urllib.request.urlopen("http://www.google.com")
             self.Internet = True
         except IOError:
             self.Internet = False
-            self.Tell(random.choice(["К сожалению я не могу вам сказать прогноз погоды,так как отсутствует интернет.","Отсутствует подключение к интернету, поэтому я не могу сказать вам прогноз погоды."]))
+            await self.Tell(random.choice(["К сожалению я не могу вам сказать прогноз погоды,так как отсутствует интернет.","Отсутствует подключение к интернету, поэтому я не могу сказать вам прогноз погоды."]))
         if self.Internet == True:
             geolocation = geocoder.ip('me')
             coordinates = geolocation.latlng
@@ -132,6 +216,50 @@ class Core:
                 await self.Tell(str(temp_str))
     async def WikiCommand(self,text):
         wikipedia.summary(text)
+    
+    async def News(self):
+        r = requests.get(self.NewsURL).text
+        soup = BeautifulSoup(r, 'html.parser')
+        content = soup.find_all("span")
+        for span in content:
+            text = span.text.replace('"','')
+            # text = await self.FilteringTransforms(text,to_words=True)
+            self.NewsArray.append(text)
+
+    # Музыкальный плеер
+    async def MusicCommand(self,command,text):
+        if command == 'music':
+            if MusicManager.PausedMusic == False and MusicManager.PlayingMusic == False and MusicManager.StoppedMusic == True:
+                MusicThread = threading.Thread(target = MusicManager.PlayMusic)
+                MusicThread.start()
+            elif MusicManager.PausedMusic == False and MusicManager.PlayingMusic == False and MusicManager.StoppedMusic == False:
+                MusicThread = threading.Thread(target = MusicManager.PlayMusic)
+                MusicThread.start()
+            elif MusicManager.PausedMusic == False and MusicManager.PlayingMusic == True and MusicManager.StoppedMusic == False:
+                await self.Tell(random.choice(ANSWERS['play-music']))
+            elif MusicManager.PausedMusic == True and MusicManager.PlayingMusic == False and MusicManager.StoppedMusic == False:
+                MusicManager.UnpauseMusic()
+
+        elif command == 'off-music':
+            if MusicManager.PlayingMusic == True:
+                MusicManager.StopMusic()
+            elif MusicManager.PlayingMusic == False and MusicManager.StoppedMusic == True:
+                await self.Tell(random.choice(ANSWERS['off-music']))
+
+        elif command == 'pause-music':
+            if MusicManager.PausedMusic == False and MusicManager.PlayingMusic == True and MusicManager.StoppedMusic == False:
+                MusicManager.PauseMusic()
+            elif MusicManager.PausedMusic == True and MusicManager.PlayingMusic == False  and MusicManager.StoppedMusic == False:
+                await self.Tell(random.choice(ANSWERS['pause-music']))
+            elif MusicManager.PausedMusic == False and MusicManager.PlayingMusic == False  and MusicManager.StoppedMusic == True:
+                await self.Tell('Музыка выключена.')
+                # self.Tell('Включить её?')
+
+        elif command == 'unpause-music':
+            if MusicManager.PausedMusic == True and MusicManager.PlayingMusic == False:
+                MusicManager.UnpauseMusic()
+            elif MusicManager.PausedMusic == False and MusicManager.PlayingMusic == True:
+                await self.Tell(random.choice(ANSWERS['unpause-music']))
 
     async def DjangoProject(self):
         ThreadProject = threading.Thread(target=CreateProjects.StartProject,args=("django_project"))
@@ -170,7 +298,8 @@ class Core:
 
     async def CommandManager(self,PredictedValue):
         # await self.Tell("Привет")
-        await self.WeatherCommand()
+        # await self.WeatherCommand()
+        await self.News()
         # await self.Functions["weather"]()
         # await self.Functions[PredictedValue]()
 
