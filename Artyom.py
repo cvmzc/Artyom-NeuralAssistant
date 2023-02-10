@@ -7,6 +7,9 @@ import json
 import asyncio
 import os
 from loguru import logger
+from Services.GetNews import ParseNews
+from threading import Thread
+import urllib.request
 
 # Инициализация параметров для распознавания речи
 SAMPLE_RATE = 16000
@@ -40,8 +43,18 @@ class ArtyomAssistant():
     async def Start(self):
         for text in self.SpeechRecognition():
             print(text)
+    
+def StartServices():
+    try:
+        urllib.request.urlopen("http://www.google.com")
+        Internet = True
+    except IOError:
+        Internet = False
+    if Internet == True:
+        ParseNewsThread = Thread(target = ParseNews(ProjectDir).StartParse).start()
 
 if __name__ == "__main__":
+    # StartServices()
     AsyncioLoop = asyncio.get_event_loop()
     assistant = ArtyomAssistant()
     # assistant.Start()
