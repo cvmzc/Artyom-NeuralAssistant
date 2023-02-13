@@ -51,7 +51,8 @@ def StartServices():
     except IOError:
         Internet = False
     if Internet == True:
-        ParseNewsThread = Thread(target = ParseNews(ProjectDir).StartParse).start()
+        Parse = ParseNews(ProjectDir)
+        ParseNewsThread = Thread(target = Parse.StartParse).start()
 
 if __name__ == "__main__":
     # StartServices()

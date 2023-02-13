@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>Form</class>
- <widget class="QWidget" name="Form">
+ <class>WidgetTimer</class>
+ <widget class="QWidget" name="WidgetTimer">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -11,7 +11,11 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Form</string>
+   <string>Таймер</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>../Images/TimerIcon.png</normaloff>../Images/TimerIcon.png</iconset>
   </property>
   <property name="autoFillBackground">
    <bool>false</bool>
@@ -19,7 +23,7 @@
   <property name="styleSheet">
    <string notr="true">background:qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgb(0, 46, 43), stop:1 rgb(28, 67, 66));</string>
   </property>
-  <widget class="QLabel" name="label">
+  <widget class="QLabel" name="TimeLabel">
    <property name="geometry">
     <rect>
      <x>40</x>

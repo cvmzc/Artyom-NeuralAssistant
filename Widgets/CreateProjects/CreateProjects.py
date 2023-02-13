@@ -68,6 +68,7 @@ class CreateProject(QWidget):
             os.mkdir(self.NameProject)
             os.chdir(os.path.join(self.Directory,self.NameProject))
             if not os.path.exists(self.NameProject):
+                os.system("git init")
                 self.UI.ProgressBar.setVisible(True)
                 self.UI.ProgressBar.setValue(5)
                 GitIgnoreFile = open(os.path.join(ProjectDir,"Templates/GitIgnore/Java.gitignore"),"r")
@@ -116,6 +117,7 @@ class CreateProject(QWidget):
             os.mkdir(self.NameProject)
             os.chdir(os.path.join(self.Directory,self.NameProject))
             if not os.path.exists(self.NameProject):
+                os.system("git init")
                 self.UI.ProgressBar.setVisible(True)
                 self.UI.ProgressBar.setValue(5)
                 GitIgnoreFile = open(os.path.join(ProjectDir,"Templates/GitIgnore/C.gitignore"),"r")
@@ -164,6 +166,7 @@ class CreateProject(QWidget):
             os.mkdir(self.NameProject)
             os.chdir(os.path.join(self.Directory,self.NameProject))
             if not os.path.exists(self.NameProject):
+                os.system("git init")
                 self.UI.ProgressBar.setVisible(True)
                 self.UI.ProgressBar.setValue(5)
                 GitIgnoreFile = open(os.path.join(ProjectDir,"Templates/GitIgnore/Go.gitignore"),"r")
@@ -215,6 +218,7 @@ class CreateProject(QWidget):
             os.mkdir(self.NameProject)
             os.chdir(os.path.join(self.Directory,self.NameProject))
             if not os.path.exists(self.NameProject):
+                os.system("git init")
                 self.UI.ProgressBar.setVisible(True)
                 self.UI.ProgressBar.setValue(5)
                 GitIgnoreFile = open(os.path.join(ProjectDir,"Templates/GitIgnore/Rust.gitignore"),"r")
@@ -260,6 +264,7 @@ class CreateProject(QWidget):
         try:
             os.chdir(self.Directory)
             if not os.path.exists(self.NameProject):
+                os.system("git init")
                 self.UI.ProgressBar.setVisible(True)
                 self.UI.ProgressBar.setValue(5)
                 if platform.system() == "Windows":
@@ -324,6 +329,7 @@ class CreateProject(QWidget):
             os.mkdir(self.NameProject)
             os.chdir(os.path.join(self.Directory,self.NameProject))
             if not os.path.exists(self.NameProject):
+                os.system("git init")
                 self.UI.ProgressBar.setVisible(True)
                 self.UI.ProgressBar.setValue(5)
                 GitIgnoreFile = open(os.path.join(ProjectDir,"Templates/GitIgnore/NodeJS.gitignore"),"r")
@@ -391,6 +397,7 @@ class CreateProject(QWidget):
             os.mkdir(self.NameProject)
             os.chdir(os.path.join(self.Directory,self.NameProject))
             if not os.path.exists(self.NameProject):
+                os.system("git init")
                 self.UI.ProgressBar.setVisible(True)
                 self.UI.ProgressBar.setValue(5)
                 GitIgnoreFile = open(os.path.join(ProjectDir,"Templates/GitIgnore/C++.gitignore"),"r")
@@ -438,6 +445,7 @@ class CreateProject(QWidget):
             print("Python")
             os.chdir(self.Directory)
             if not os.path.exists(self.NameProject):
+                os.system("git init")
                 self.UI.ProgressBar.setVisible(True)
                 self.UI.ProgressBar.setValue(5)
                 os.mkdir(self.NameProject)
@@ -503,11 +511,11 @@ class CreateProject(QWidget):
             CreateThread.start()
         else:
             sys.exit()
-
-def StartWidget(type:str):
+    
+def StartWidget(type:str,**kwargs):
     app = QApplication(sys.argv)
     Widgets = CreateProject(type=type)
     sys.exit(app.exec())
 
-if __name__ == '__main__':
-    StartWidget("django_project")
+# if __name__ == '__main__':
+#     StartWidget("django_project")

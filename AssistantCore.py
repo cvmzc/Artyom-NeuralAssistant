@@ -7,16 +7,10 @@ import torch
 import webbrowser
 import sounddevice as sd
 import sys
-from Preprocessing import PreprocessingDataset
-from NeuralNetwork import NeuralNetwork
 import geocoder
 from pyowm import OWM
-import threading
-from MusicManager import MusicManager
+from Widgets.MusicPlayer.MusicManager import MusicManager
 import platform
-from loguru import logger
-from datetime import date
-from Alarm import Alarm
 from Widgets.Timer.Timer import Timer
 from Widgets.Stopwatch.Stopwatch import Stopwatch
 from CommunicationNetwork import CommunicationNetwork
@@ -26,10 +20,10 @@ from PIL import ImageGrab
 import asyncio
 import wikipedia
 import urllib.request
-import requests
-sys.path.append(os.path.join(os.path.dirname(os.path.realpath(__file__)),"Widgets"))
-from Widgets import CreateProjects
-from bs4 import BeautifulSoup
+sys.path.append(os.path.join(os.path.dirname(os.path.realpath(__file__)),"Widgets","CreateProjects"))
+from Widgets.CreateProjects.CreateProjects import StartWidget,Start
+import threading
+import multiprocessing
 
 # Инициализация параметров
 ProjectDir = os.path.dirname(os.path.realpath(__file__))
@@ -46,7 +40,7 @@ put_yo = True
 DEVICE = torch.device('cpu')
 
 # Импортирование необходмых для полноценной работы ассистента классов
-TransformsFile =  open(os.path.join(ProjectDir,'AssistantSettings/Transforms.json'),'r',encoding='utf-8')
+TransformsFile =  open(os.path.join(ProjectDir,'AssistantConfig/Transforms.json'),'r',encoding='utf-8')
 Transforms = json.load(TransformsFile)
 TransformsFile.close()
 NAMES = ['Артём','Артемий','Артёша','Артемьюшка','Артя','Артюня','Артюха','Артюша','Артёмка','Артёмчик','Тёма']
@@ -57,8 +51,6 @@ file.close()
 class Core:
     def __init__(self):
         self.owm = OWM('2221d769ed67828e858caaa3803161ea')
-        self.NewsURL = "https://lenta.ru/"
-        self.NewsArray = []
         self.Functions = {
             'communication':self.CommunicationCommand,'weather':self.WeatherCommand,
             "c++_project":self.CppProject,"django_project":self.DjangoProject,"python_project":self.PythonProject,"NodeJS_project":self.NodeJSProject,
@@ -71,6 +63,8 @@ class Core:
         self.model.to(DEVICE)
         self.timer = Timer()
         self.stopwatch = Stopwatch()
+        self.CommunicationNetwork = CommunicationNetwork()
+        ThreadCommunicationFit = threading.Thread(target = self.CommunicationNetwork.Start).start()
     
     async def Tell(self,text):
         audio = self.model.apply_tts(text=text+"..",
@@ -115,8 +109,9 @@ class Core:
             TransformedText = text
             return TransformedText
 
-    async def CommunicationCommand(self):
-        print("hello")
+    async def CommunicationCommand(self,context:str):
+        Answer = self.CommunicationNetwork.predict(context)
+        await self.Tell(Answer)
 
     async def ExitCommand(self):
         await self.Tell(random.choice(ANSWERS['exit']))
@@ -146,7 +141,7 @@ class Core:
 
     # Скриншот
     async def ScreenShotCommand(self):
-        image = ImageGrab()
+        image = ImageGrab.grab()
         NameImage = "{}-{}.png".format(time.strftime('%H'),time.strftime('%M'))
         if platform.system() == "Windows":
             ImagePath = os.path.join(os.path.expanduser('~'),'Pictures','Screenshots')
@@ -154,7 +149,14 @@ class Core:
         elif platform.system() == "Linux":
             pass
         elif platform.system() == "Darwin":
-            pass
+            if os.path.exists(os.path.join(os.path.expanduser('~'),'Desktop','Screenshots')):
+                ImagePath = os.path.join(os.path.expanduser('~'),'Desktop','Screenshots')
+                image.save(NameImage, "PNG")
+            else:
+                os.chdir(os.path.expanduser('~'),'Desktop')
+                os.mkdir("Screenshots")
+                ImagePath = os.path.join(os.path.expanduser('~'),'Desktop','Screenshots')
+                image.save(NameImage, "PNG")
     
     # Спящий режим
     async def HibernationCommand(self):
@@ -174,6 +176,7 @@ class Core:
         elif platform.system() == 'Linux':
             await self.Tell("Эта функция пока не доступна")
         elif platform.system() == 'Darwin':
+            # os.system("shutdown -r")
             await self.Tell("Эта функция пока не доступна")
 
     # Выключение компьютера
@@ -218,13 +221,18 @@ class Core:
         wikipedia.summary(text)
     
     async def News(self):
-        r = requests.get(self.NewsURL).text
-        soup = BeautifulSoup(r, 'html.parser')
-        content = soup.find_all("span")
-        for span in content:
-            text = span.text.replace('"','')
-            # text = await self.FilteringTransforms(text,to_words=True)
-            self.NewsArray.append(text)
+        file = open("AssistantConfig/News.json","r")
+        self.News = json.load(file)
+        file.close()
+        for news in self.News:
+            await self.Tell(news)
+    
+    async def it_news(self):
+        file = open("AssistantConfig/IT_News.json","r")
+        self.IT_News = json.load(file)
+        file.close()
+        for news in self.IT_News:
+            await self.Tell(news)
 
     # Музыкальный плеер
     async def MusicCommand(self,command,text):
@@ -262,36 +270,37 @@ class Core:
                 await self.Tell(random.choice(ANSWERS['unpause-music']))
 
     async def DjangoProject(self):
-        ThreadProject = threading.Thread(target=CreateProjects.StartProject,args=("django_project"))
+        ThreadProject = threading.Thread(target=StartWidget,args=("django_project",))
         ThreadProject.start()
 
     async def CppProject(self):
-        ThreadProject = threading.Thread(target=CreateProjects.StartProject,args=("c++_project"))
+        ThreadProject = threading.Thread(target=StartWidget,args=("c++_project",))
         ThreadProject.start()
 
     async def RustProject(self):
-        ThreadProject = threading.Thread(target=CreateProjects.StartProject,args=("rust_project"))
+        ThreadProject = threading.Thread(target=StartWidget,args=("rust_project",))
         ThreadProject.start()
     
     async def GoProject(self):
-        ThreadProject = threading.Thread(target=CreateProjects.StartProject,args=("go_project"))
+        ThreadProject = threading.Thread(target=StartWidget,args=("go_project",))
         ThreadProject.start()
 
     async def NodeJSProject(self):
-        ThreadProject = threading.Thread(target=CreateProjects.StartProject,args=("NodeJS_project"))
+        ThreadProject = threading.Thread(target=StartWidget,args=("NodeJS_project",))
         ThreadProject.start()
 
     async def CProject(self):
-        ThreadProject = threading.Thread(target=CreateProjects.StartProject,args=("c_project"))
+        ThreadProject = threading.Thread(target=StartWidget,args=("c_project",))
         ThreadProject.start()
 
     async def JavaProject(self):
-        ThreadProject = threading.Thread(target=CreateProjects.StartProject,args=("java_project"))
+        ThreadProject = threading.Thread(target=StartWidget,args=("java_project",))
         ThreadProject.start()
     
     async def PythonProject(self):
-        ThreadProject = threading.Thread(target=CreateProjects.StartProject,args=("python_project"))
+        ThreadProject = threading.Thread(target=StartWidget,args=("python_project",))
         ThreadProject.start()
+        # StartWidget("python_project")
 
     async def CreateEchoBot(self):
         pass
@@ -299,7 +308,7 @@ class Core:
     async def CommandManager(self,PredictedValue):
         # await self.Tell("Привет")
         # await self.WeatherCommand()
-        await self.News()
+        await self.PythonProject()
         # await self.Functions["weather"]()
         # await self.Functions[PredictedValue]()
 

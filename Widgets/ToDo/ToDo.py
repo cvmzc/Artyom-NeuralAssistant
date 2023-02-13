@@ -6,28 +6,27 @@ import platform
 from loguru import logger
 if platform.system() == 'Windows':
     from win10toast import ToastNotifier
-    
-# Инициализация параметров
-ProjectDir = os.path.dirname(os.path.realpath(__file__))
+
 
 class TodoManager:
-    def __init__(self) -> None:
+    def __init__(self,ProjectDir) -> None:
+        self.ProjectDir = ProjectDir
         self.UpdateNotes()
         self.LocalDate = date.today().strftime("%B %d, %Y")
         self.LocalTime = (f"{time.strftime('%H')}:{time.strftime('%M')}")
         self.TodoNotes = {"notes":{}}
 
     def UpdateNotes(self):
-        if os.path.exists(os.path.join(ProjectDir,'AssistantSettings/TodoNotes.json')):
-            file = open('AssistantSettings/TodoNotes.json','r',encoding='utf-8')
+        if os.path.exists(os.path.join(self.ProjectDir,'AssistantConfig/TodoNotes.json')):
+            file = open('AssistantConfig/TodoNotes.json','r',encoding='utf-8')
             DataFile = json.load(file)
             self.TodoNotes = DataFile
             file.close()
         else:
-            file = open('AssistantSettings/TodoNotes.json','w',encoding='utf-8')
+            file = open('AssistantConfig/TodoNotes.json','w',encoding='utf-8')
             json.dump({"notes":{}},file,ensure_ascii=False,sort_keys=True, indent=2)
             file.close()
-            file = open('AssistantSettings/TodoNotes.json','r',encoding='utf-8')
+            file = open('AssistantConfig/TodoNotes.json','r',encoding='utf-8')
             DataFile = json.load(file)
             self.TodoNotes = DataFile
             file.close()
@@ -39,7 +38,7 @@ class TodoManager:
         self.LocalTime = (f"{time.strftime('%H')}:{time.strftime('%M')}")
 
     def SaveNotes(self):
-        file = open('AssistantSettings/TodoNotes.json','w',encoding='utf-8')
+        file = open('AssistantConfig/TodoNotes.json','w',encoding='utf-8')
         json.dump(self.TodoNotes,file,ensure_ascii=False,sort_keys=True, indent=2)
         file.close()
 

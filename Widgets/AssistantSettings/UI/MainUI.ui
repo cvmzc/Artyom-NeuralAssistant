@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>AssistantSettings</class>
+ <widget class="QMainWindow" name="AssistantSettings">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>640</width>
+    <height>480</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Настройки ассистента</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>../Images/Settings.Icon.png</normaloff>../Images/Settings.Icon.png</iconset>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background:qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgb(0, 46, 43), stop:1 rgb(28, 67, 66));</string>
+  </property>
+  <widget class="QWidget" name="SettingsWidget">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QMenuBar" name="MainMenu">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>640</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QMenuBar{
+	background-color: rgba(255, 255, 255, 0);
+	color:white;
+}
+
+</string>
+   </property>
+   <widget class="QMenu" name="FileMenu">
+    <property name="styleSheet">
+     <string notr="true">QAction::item:hover {
+	background-color: rgba(255, 255, 255, 50);
+	border-radius: 5px;
+	color:red;
+}</string>
+    </property>
+    <property name="title">
+     <string>Файл</string>
+    </property>
+    <addaction name="CloseButton"/>
+    <addaction name="ExitButton"/>
+   </widget>
+   <widget class="QMenu" name="SettingsMenu">
+    <property name="title">
+     <string>Настройки</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="WindowMenu">
+    <property name="title">
+     <string>Окно</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="HelpMenu">
+    <property name="title">
+     <string>Помощь</string>
+    </property>
+   </widget>
+   <addaction name="FileMenu"/>
+   <addaction name="SettingsMenu"/>
+   <addaction name="WindowMenu"/>
+   <addaction name="HelpMenu"/>
+  </widget>
+  <action name="ExitButton">
+   <property name="text">
+    <string>Выход</string>
+   </property>
+  </action>
+  <action name="CloseButton">
+   <property name="text">
+    <string>Закрыть</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

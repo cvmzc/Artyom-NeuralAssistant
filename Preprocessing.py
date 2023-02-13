@@ -129,61 +129,6 @@ class PreprocessingDataset:
             vectorizer.fit_transform(DataFile)
             self.PredictInput = self.ToMatrix(vectorizer.transform(self.PredictArray).toarray())
             return self.PredictInput
-
-    def PreprocessingWikiText(self,PredictArray:list = [],Dictionary:dict = {},mode = 'train'):
-        if os.path.exists(os.path.join(ProjectDir,'Datasets/WikiDataset.json')):
-            file = open('Datasets/WikiDataset.json','r',encoding='utf-8')
-            DataFile = json.load(file)
-            dataset = DataFile['dataset']
-            file.close()
-        else:
-            raise RuntimeError
-
-        if os.path.exists(os.path.join(ProjectDir,'NeuralNetworkSettings/WikiSettings.json')):
-            file = open(os.path.join(ProjectDir,'NeuralNetworkSettings/WikiSettings.json'),'r',encoding='utf-8')
-            DataFile = json.load(file)
-            CATEGORIES = DataFile['CATEGORIES']
-            CATEGORIES_TARGET = DataFile['CATEGORIES_TARGET']
-            file.close()
-        else:
-            raise RuntimeError
-        self.Mode = mode
-        if self.Mode == 'train' or self.Mode == 'test':
-            self.Dictionary = list(Dictionary.items())
-            random.shuffle(self.Dictionary)
-            self.Dictionary = dict(self.Dictionary)
-            for intent in track(self.Dictionary,description='[green]Preprocessing Wiki Dataset'):
-                for questions in Dictionary[intent]['questions']:
-                    self.x.append(questions)
-                    self.y.append(intent)
-            if self.Mode == 'train':
-                for target in self.y:
-                    self.TrainTarget.append(CATEGORIES[target])
-            elif self.Mode == 'test':
-                for target in self.y:
-                    self.TestTarget.append(CATEGORIES[target])
-            vectorizer = TfidfVectorizer()
-            vectorizer = vectorizer.fit_transform(self.x)
-            VectorizedData = vectorizer.toarray()
-            InputDatasetFile = open("Datasets/WikiInputDataset.json", "w", encoding ='utf8')
-            json.dump(self.x, InputDatasetFile,ensure_ascii=False,sort_keys=True, indent=2)
-            InputDatasetFile.close()
-            if self.Mode == 'train':
-                self.TrainInput = self.ToMatrix(VectorizedData)
-                return self.TrainInput,self.TrainTarget
-            elif self.Mode == 'test':
-                self.TestInput = self.ToMatrix(VectorizedData)
-                return self.TestInput,self.TestTarget
-
-        elif self.Mode == 'predict':
-            self.PredictArray = PredictArray
-            InputDatasetFile = open("Datasets/WikiInputDataset.json", "r", encoding ='utf8')
-            DataFile = json.load(InputDatasetFile)
-            InputDatasetFile.close()
-            vectorizer = TfidfVectorizer()
-            vectorizer.fit_transform(DataFile)
-            self.PredictInput = self.ToMatrix(vectorizer.transform(self.PredictArray).toarray())
-            return self.PredictInput
 # clf.predict(X[:2, :])
 # TrainInput,TrainTarget = PreprocessingDataset().PreprocessingAudio(PathAudio="C:/Users/Blackflame576/Documents/Blackflame576/DigitalBit/Artyom-NeuralAssistant/Datasets/SpeechDataset/")
 # x = np.linspace(0, 2*np.pi, 8)

@@ -14,11 +14,11 @@ from NeuralNetwork import NeuralNetwork
 import geocoder
 from pyowm import OWM
 import threading
-from MusicManager import MusicManager
+from Widgets.MusicPlayer.MusicManager import MusicManager
 import platform
 from loguru import logger
 from datetime import date
-from Alarm import Alarm
+from Widgets.Alarm.Alarm import Alarm
 from Timer.Timer import Timer
 from Stopwatch.Stopwatch import Stopwatch
 if platform.system() == 'Windows':

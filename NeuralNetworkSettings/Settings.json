@@ -47,7 +47,8 @@
         "c_project":44,
         "python_project":45,
         "NodeJS_project":46,
-        "java_project":47
+        "java_project":47,
+        "it_news":48
     },
     "CATEGORIES_TARGET":{
         "0":"communication",
@@ -97,7 +98,8 @@
         "44":"c_project",
         "45":"python_project",
         "46":"NodeJS_project",
-        "47":"java_project"
+        "47":"java_project",
+        "48":"it_news"
     },
     "learning_rate":0.001,
     "EPOCHS":100000,

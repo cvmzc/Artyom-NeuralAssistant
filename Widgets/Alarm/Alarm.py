@@ -8,22 +8,23 @@ import json
 from win10toast import ToastNotifier
 import platform
 
-ProjectDir = os.getcwd()
-DefaultAudioPath = os.path.join(ProjectDir,"Audio/Alarm.wav")
-AudioPath = DefaultAudioPath
-
 class Alarm:
-    def __init__(self):
+    def __init__(self,ProjectDir):
+        global AudioPath
+        global DefaultAudioPath
+        self.ProjectDir = ProjectDir
+        DefaultAudioPath = os.path.join(ProjectDir,"Audio/Alarm.wav")
+        AudioPath = DefaultAudioPath
         self.Alarms = {"alarms":{}}
         self.CheckAlarmFile()
 
     def CheckAlarmFile(self):
-        if os.path.exists(os.path.join(ProjectDir,'AssistantSettings/Alarm.json')):
-            file = open(os.path.join(ProjectDir,'AssistantSettings/Alarm.json'),'r',encoding='utf-8')
+        if os.path.exists(os.path.join(self.ProjectDir,'AssistantConfig/Alarm.json')):
+            file = open(os.path.join(self.ProjectDir,'AssistantConfig/Alarm.json'),'r',encoding='utf-8')
             self.Alarms = json.load(file)
             file.close()
         else:
-            file = open(os.path.join(ProjectDir,'AssistantSettings/Alarm.json'),"w")
+            file = open(os.path.join(self.ProjectDir,'AssistantConfig/Alarm.json'),"w")
             json.dump(self.Alarms,file,ensure_ascii=False,sort_keys=True, indent=2)
             file.close()
 
@@ -38,12 +39,12 @@ class Alarm:
         self.LocalTime = str(time.strftime("%H") + ":" + time.strftime("%M"))
 
     def UpdateAlarm(self):
-        file = open(os.path.join(ProjectDir,'AssistantSettings/Alarm.json'),'r',encoding='utf-8')
+        file = open(os.path.join(self.ProjectDir,'AssistantConfig/Alarm.json'),'r',encoding='utf-8')
         self.Alarms = json.load(file)
         file.close()
     
     def SaveAlarms(self):
-        file = open(os.path.join(ProjectDir,'AssistantSettings/Alarm.json'),"w")
+        file = open(os.path.join(self.ProjectDir,'AssistantConfig/Alarm.json'),"w")
         json.dump(self.Alarms,file,ensure_ascii=False,sort_keys=True, indent=2)
         file.close()
 

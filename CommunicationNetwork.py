@@ -45,4 +45,4 @@ class CommunicationNetwork(BaseEstimator):
 if __name__ == "__main__":
     communication_network = CommunicationNetwork()
     communication_network.Start()
-    print(communication_network.predict('я не знаю никакого джейка'))
+    print(communication_network.predict('Привет.Как дела?'))
