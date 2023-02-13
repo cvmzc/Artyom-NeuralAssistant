@@ -220,6 +220,8 @@ class NeuralNetwork:
         if hostname.startswith("rpi"):
             LED_Green()
         self.Training = False
+        # Функция для вызова нейросети
+        network.predict(Preprocessing.PreprocessingText(PredictArray = ['скажи время'],mode = 'predict'))
 
     # Функция для вызова нейросети
     def predict(self,Input):
@@ -298,8 +300,6 @@ if __name__ == '__main__':
                 TrainProcess.start()
             else:
                 print("Neural Network is already training")
-            # Функция для вызова нейросети
-            network.predict(Preprocessing.PreprocessingText(PredictArray = ['скажи время'],mode = 'predict'))
         elif command == "predict":
             Input = input("Question >>>")
             # Функция для вызова нейросети
