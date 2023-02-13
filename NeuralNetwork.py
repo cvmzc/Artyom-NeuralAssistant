@@ -190,8 +190,7 @@ class NeuralNetwork:
         # print(self.INPUT_DIM)
         self.GenerateWeights()
         # Прохождение по датасету циклом for
-        for epoch in range(EPOCHS):
-        # for epoch in track(range(EPOCHS), description='[green]Training Classification model'):
+        for epoch in track(range(EPOCHS), description='[green]Training Classification model'):
             # Вызов функции для расчёта прямого распространения нейросети
             PredictedValue = self.FeedForward(TrainInput)
             # Вызов функции для расчёта обратного распространения ошибки нейросети
