@@ -84,8 +84,8 @@ class PreprocessingDataset:
         else:
             raise RuntimeError
 
-        if os.path.exists(os.path.join(ProjectDir,'NeuralNetworkSettings/Settings.json')):
-            file = open(os.path.join(ProjectDir,'NeuralNetworkSettings/Settings.json'),'r',encoding='utf-8')
+        if os.path.exists(os.path.join(ProjectDir,'Settings/Settings.json')):
+            file = open(os.path.join(ProjectDir,'Settings/Settings.json'),'r',encoding='utf-8')
             DataFile = json.load(file)
             CATEGORIES = DataFile['CATEGORIES']
             CATEGORIES_TARGET = DataFile['CATEGORIES_TARGET']

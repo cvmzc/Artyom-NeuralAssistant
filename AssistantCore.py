@@ -13,7 +13,7 @@ from Widgets.MusicPlayer.MusicManager import MusicManager
 import platform
 from Widgets.Timer.Timer import Timer
 from Widgets.Stopwatch.Stopwatch import Stopwatch
-from CommunicationNetwork import CommunicationNetwork
+from NeuralNetworks.CommunicationNetwork import CommunicationNetwork
 if platform.system() == 'Windows':
     from win10toast import ToastNotifier
 from PIL import ImageGrab
@@ -21,7 +21,7 @@ import asyncio
 import wikipedia
 import urllib.request
 sys.path.append(os.path.join(os.path.dirname(os.path.realpath(__file__)),"Widgets","CreateProjects"))
-from Widgets.CreateProjects.CreateProjects import StartWidget,Start
+from Widgets.CreateProjects.CreateProjects import StartWidget
 import threading
 import multiprocessing
 

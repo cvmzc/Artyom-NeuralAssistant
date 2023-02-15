@@ -1,7 +1,7 @@
-from NeuralNetwork import NeuralNetwork
+from NeuralNetworks.NeuralNetwork import NeuralNetwork
 import os
 import json
-from Preprocessing import PreprocessingDataset
+from NeuralNetworks.Preprocessing import PreprocessingDataset
 
 # Подготовка датасета
 ProjectDir = os.getcwd()
@@ -15,8 +15,8 @@ if os.path.exists(os.path.join(ProjectDir,'Datasets/ArtyomDataset.json')):
 else:
     raise RuntimeError
 
-if os.path.exists(os.path.join(ProjectDir,'NeuralNetworkSettings/Settings.json')):
-    file = open(os.path.join(ProjectDir,'NeuralNetworkSettings/Settings.json'),'r',encoding='utf-8')
+if os.path.exists(os.path.join(ProjectDir,'Settings/Settings.json')):
+    file = open(os.path.join(ProjectDir,'Settings/Settings.json'),'r',encoding='utf-8')
     DataFile = json.load(file)
     CATEGORIES = DataFile['CATEGORIES']
     CATEGORIES_TARGET = DataFile['CATEGORIES_TARGET']
