@@ -6,7 +6,7 @@ from PyQt5.QtGui import*
 import os
 from loguru import logger
 import platform
-from win10toast import ToastNotifier
+#from win10toast import ToastNotifier
 from threading import Thread
 import json
 
@@ -517,5 +517,5 @@ def StartWidget(type:str,**kwargs):
     Widgets = CreateProject(type=type)
     sys.exit(app.exec())
 
-# if __name__ == '__main__':
-#     StartWidget("django_project")
+if __name__ == '__main__':
+	StartWidget("django_project")
