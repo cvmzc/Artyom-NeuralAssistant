@@ -59,6 +59,7 @@ class ArtyomAssistant():
             print(text)
             PreprocessedText = self.Preprocessing.PreprocessingText(PredictArray = [text],mode = 'predict')
             PredictedValue = self.Network.predict(PreprocessedText)
+            core = Core()
             await core.CommandManager(PredictedValue)
         # core = Core()
         # await core.CommandManager("Hello")
