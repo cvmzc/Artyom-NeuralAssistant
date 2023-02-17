@@ -6,10 +6,9 @@ from PyQt5.QtGui import*
 import os
 from loguru import logger
 import platform
-#from win10toast import ToastNotifier
 from threading import Thread
 import json
-
+from plyer import notification 
 # Инициализация параметров для логирования
 ProjectDir = os.path.dirname(os.path.realpath(__file__))
 logger.add(os.path.join(ProjectDir,'Logs/CreateProjects.log'),format="{time} {level} {message}",level="INFO",rotation="200 MB",diagnose=True)
@@ -35,20 +34,25 @@ class CreateProject(QWidget):
         self.show()
     
     def OpenDirectory(self):
-        # self.Directory = QtWidgets.QFileDialog.getExistingDirectory(self, 'Выберите папку для проекта:', r'C:\\')
-        self.Directory = r"C:\Users\Blackflame576\Documents\Blackflame576\DigitalBit\Artyom-NeuralAssistant\Widgets"
+        self.Directory = QtWidgets.QFileDialog.getExistingDirectory(self, 'Выберите папку для проекта:', r'C:\\')
+        # self.Directory = r"C:\Users\Blackflame576\Documents\Blackflame576\DigitalBit\Artyom-NeuralAssistant\Widgets"
 
     def Notification(self,title,message):
-        if platform.system() == 'Windows':
-            ToastNotifier().show_toast(title=title,msg=message,duration=5)
+        notification.notify(  
+            title = title,  
+            message = message,  
+            app_icon = None,  
+            timeout = 10,  
+            toast = False  
+        )  
 
     def Interface(self):
         self.UI.DirectoryButton.clicked.connect(self.OpenDirectory)
         self.UI.CreateButton.clicked.connect(self.Create)
-        if self.TypeProject == "python":
+        if self.TypeProject == "python_project":
             self.UI.EnvCheckBox.setVisible(True)
             self.UI.EnvCheckBox.setChecked(True)
-        elif self.TypeProject == "django":
+        elif self.TypeProject == "django_project":
             self.UI.NameMainScript.setEnabled(False)
             self.UI.EnvCheckBox.setVisible(True)
             self.UI.EnvCheckBox.setChecked(True)
@@ -501,7 +505,7 @@ class CreateProject(QWidget):
             self.UI.ErrorNameProject.setHidden(False)
         else:
             self.UI.ErrorNameProject.setHidden(True)
-        if len(self.NameScript.split()) == 0 and self.TypeProject != "django":
+        if len(self.NameScript.split()) == 0 and self.TypeProject != "django_project":
             self.UI.ErrorMainScript.setHidden(False)
         else:
             self.UI.ErrorMainScript.setHidden(True)
