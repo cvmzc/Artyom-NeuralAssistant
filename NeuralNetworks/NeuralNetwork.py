@@ -19,12 +19,12 @@ if hostname.startswith("rpi"):
 plt.style.use("cyberpunk")
 np.random.seed(0)
 
-ProjectDir = os.getcwd()
+ProjectDir = os.path.dirname(os.path.realpath(__file__))
 logger.add(os.path.join(ProjectDir,'Logs/NeuralNetwork.log'),format="{time} {level} {message}",level="INFO",rotation="200 MB",diagnose=True)
 
 # Подготовка датасета
 if os.path.exists(os.path.join(ProjectDir,'Datasets/ArtyomDataset.json')):
-    file = open('Datasets/ArtyomDataset.json','r',encoding='utf-8')
+    file = open(os.path.join(ProjectDir,'Datasets/ArtyomDataset.json'),'r',encoding='utf-8')
     Preprocessing = PreprocessingDataset()
     DataFile = json.load(file)
     dataset = DataFile['dataset']
@@ -33,8 +33,8 @@ if os.path.exists(os.path.join(ProjectDir,'Datasets/ArtyomDataset.json')):
 else:
     raise RuntimeError
 
-if os.path.exists(os.path.join(ProjectDir,'NeuralNetworkSettings/Settings.json')):
-    file = open(os.path.join(ProjectDir,'NeuralNetworkSettings/Settings.json'),'r',encoding='utf-8')
+if os.path.exists(os.path.join(ProjectDir,'Settings/Settings.json')):
+    file = open(os.path.join(ProjectDir,'Settings/Settings.json'),'r',encoding='utf-8')
     DataFile = json.load(file)
     CATEGORIES = DataFile['CATEGORIES']
     CATEGORIES_TARGET = DataFile['CATEGORIES_TARGET']

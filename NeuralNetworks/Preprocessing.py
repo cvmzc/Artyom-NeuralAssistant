@@ -9,7 +9,7 @@ from sklearn.preprocessing import LabelEncoder,OneHotEncoder
 from rich.progress import track
 
 # Подготовка датасета
-ProjectDir = os.getcwd()
+ProjectDir = os.path.dirname(os.path.realpath(__file__))
 
 class PreprocessingDataset:
     def __init__(self):
@@ -77,7 +77,7 @@ class PreprocessingDataset:
 
     def PreprocessingText(self,PredictArray:list = [],Dictionary:dict = {},mode = 'train'):
         if os.path.exists(os.path.join(ProjectDir,'Datasets/ArtyomDataset.json')):
-            file = open('Datasets/ArtyomDataset.json','r',encoding='utf-8')
+            file = open(os.path.join(ProjectDir,'Datasets/ArtyomDataset.json'),'r',encoding='utf-8')
             DataFile = json.load(file)
             dataset = DataFile['dataset']
             file.close()
@@ -110,7 +110,7 @@ class PreprocessingDataset:
             vectorizer = TfidfVectorizer()
             vectorizer = vectorizer.fit_transform(self.x)
             VectorizedData = vectorizer.toarray()
-            InputDatasetFile = open("Datasets/InputDataset.json", "w", encoding ='utf8')
+            InputDatasetFile = open(os.path.join(ProjectDir,"Datasets/InputDataset.json"), "w", encoding ='utf8')
             json.dump(self.x, InputDatasetFile,ensure_ascii=False,sort_keys=True, indent=2)
             InputDatasetFile.close()
             if self.Mode == 'train':
