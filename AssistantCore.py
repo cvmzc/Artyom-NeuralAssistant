@@ -17,7 +17,7 @@ from NeuralNetworks.CommunicationNetwork import CommunicationNetwork
 if platform.system() == 'Windows':
     from win10toast import ToastNotifier
 from PIL import ImageGrab
-import asyncio
+# import asyncio
 import wikipedia
 import urllib.request
 sys.path.append(os.path.join(os.path.dirname(os.path.realpath(__file__)),"Widgets","CreateProjects"))
@@ -44,7 +44,7 @@ TransformsFile =  open(os.path.join(ProjectDir,'AssistantConfig/Transforms.json'
 Transforms = json.load(TransformsFile)
 TransformsFile.close()
 NAMES = ['Артём','Артемий','Артёша','Артемьюшка','Артя','Артюня','Артюха','Артюша','Артёмка','Артёмчик','Тёма']
-file = open(os.path.join(ProjectDir,'NeuralNetworkSettings/ArtyomAnswers.json'),'r',encoding='utf-8')
+file = open('NeuralNetworks/Settings/ArtyomAnswers.json','r',encoding='utf-8')
 ANSWERS  = json.load(file)
 file.close()
 
@@ -306,9 +306,10 @@ class Core:
         pass
 
     async def CommandManager(self,PredictedValue):
+        print(PredictedValue)
         # await self.Tell("Привет")
         # await self.WeatherCommand()
-        await self.PythonProject()
+        # await self.PythonProject()
         # await self.Functions["weather"]()
         # await self.Functions[PredictedValue]()
 

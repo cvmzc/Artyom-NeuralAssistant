@@ -1,8 +1,7 @@
 import threading 
 import time
 import platform
-if platform.system() == 'Windows':
-    from win10toast import ToastNotifier
+from plyer import notification 
 
 class Timer:
     def __init__(self):
@@ -14,8 +13,13 @@ class Timer:
         self.TimeThread = None
 
     def Notification(self,title,message):
-        if platform.system() == 'Windows':
-            ToastNotifier().show_toast(title=title,msg=message,duration=5)
+        notification.notify(  
+            title = title,  
+            message = message,  
+            app_icon = None,  
+            timeout = 10,  
+            toast = False  
+        ) 
 
     def Main(self,hours,minutes,seconds):
         self.TimeThread = threading.Thread(target = self.Start,args=(hours,minutes,seconds)).start()

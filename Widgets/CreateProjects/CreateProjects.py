@@ -9,6 +9,7 @@ import platform
 from threading import Thread
 import json
 from plyer import notification 
+
 # Инициализация параметров для логирования
 ProjectDir = os.path.dirname(os.path.realpath(__file__))
 logger.add(os.path.join(ProjectDir,'Logs/CreateProjects.log'),format="{time} {level} {message}",level="INFO",rotation="200 MB",diagnose=True)

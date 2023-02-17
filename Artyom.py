@@ -10,6 +10,9 @@ from loguru import logger
 from Services.GetNews import ParseNews
 from threading import Thread
 import urllib.request
+sys.path.append(os.path.join(os.path.dirname(os.path.realpath(__file__)),"NeuralNetworks"))
+from NeuralNetworks.NeuralNetwork import NeuralNetwork
+from NeuralNetworks.Preprocessing import PreprocessingDataset
 
 # Инициализация параметров для распознавания речи
 SAMPLE_RATE = 16000
@@ -21,12 +24,23 @@ logger.add(os.path.join(ProjectDir,'Logs/ArtyomAssistant.log'),format="{time} {l
 class ArtyomAssistant():
     def __init__(self):
         super(ArtyomAssistant).__init__()
+        if os.path.exists(os.path.join(ProjectDir,'NeuralNetworks','Settings/Settings.json')):
+            file = open(os.path.join(ProjectDir,'NeuralNetworks','Settings/Settings.json'),'r',encoding='utf-8')
+            DataFile = json.load(file)
+            CATEGORIES = DataFile['CATEGORIES']
+            CATEGORIES_TARGET = DataFile['CATEGORIES_TARGET']
+            file.close()
+        else:
+            raise RuntimeError
+        self.Network = NeuralNetwork(CATEGORIES = CATEGORIES,CATEGORIES_TARGET = CATEGORIES_TARGET)
+        self.Preprocessing = PreprocessingDataset()
+        self.Network.load()
         self.model = vosk.Model("model_small")
         self.queue = queue.Queue()
 
     def q_callback(self,indata, frames, time, status):
-        if status:
-            print(status, file=sys.stderr)
+        # if status:
+        #     print(status, file=sys.stderr)
         self.queue.put(bytes(indata))
 
     def SpeechRecognition(self):
@@ -43,6 +57,12 @@ class ArtyomAssistant():
     async def Start(self):
         for text in self.SpeechRecognition():
             print(text)
+            PreprocessedText = self.Preprocessing.PreprocessingText(PredictArray = [text],mode = 'predict')
+            PredictedValue = self.Network.predict(PreprocessedText)
+            await core.CommandManager(PredictedValue)
+        # core = Core()
+        # await core.CommandManager("Hello")
+
     
 def StartServices():
     try:

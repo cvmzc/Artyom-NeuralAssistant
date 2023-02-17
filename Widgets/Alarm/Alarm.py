@@ -5,7 +5,7 @@ import soundfile as sf
 from loguru import logger
 import os
 import json
-from win10toast import ToastNotifier
+from plyer import notification 
 import platform
 
 class Alarm:
@@ -29,8 +29,13 @@ class Alarm:
             file.close()
 
     def Notification(self,title,message):
-        if platform.system() == 'Windows':
-            ToastNotifier().show_toast(title=title,msg=message,duration=5)
+        notification.notify(  
+            title = title,  
+            message = message,  
+            app_icon = None,  
+            timeout = 10,  
+            toast = False  
+        ) 
 
     def UpdateDate(self):
         self.LocalDate = date.today().strftime("%B %d, %Y")
