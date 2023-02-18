@@ -30,4 +30,4 @@ jobs:
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
     - name: Run train neural network
       run: |
-        python3 NeuralNetworks/TrainNeuralNetworks.py train
+        python3 NeuralNetworks/TrainNeuralNetwork.py train
