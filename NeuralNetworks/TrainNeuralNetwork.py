@@ -1,7 +1,7 @@
-from NeuralNetworks.NeuralNetwork import NeuralNetwork
+from NeuralNetwork import NeuralNetwork
 import os
 import json
-from NeuralNetworks.Preprocessing import PreprocessingDataset
+from Preprocessing import PreprocessingDataset
 import matplotlib.pyplot as plt
 import mplcyberpunk
 from loguru import logger
