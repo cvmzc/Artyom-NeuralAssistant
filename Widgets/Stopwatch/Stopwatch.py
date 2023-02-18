@@ -1,6 +1,5 @@
 import threading 
 import time
-import platform
 from plyer import notification 
 
 class Stopwatch:

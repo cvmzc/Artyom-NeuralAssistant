@@ -313,7 +313,7 @@ class Core:
         # await self.Functions["weather"]()
         # await self.Functions[PredictedValue]()
 
-if __name__ == "__main__":
-    AsyncioLoop = asyncio.get_event_loop()
-    core = Core()
-    AsyncioLoop.run_until_complete(core.CommandManager("communication"))
+# if __name__ == "__main__":
+#     AsyncioLoop = asyncio.get_event_loop()
+#     core = Core()
+#     AsyncioLoop.run_until_complete(core.CommandManager("communication"))

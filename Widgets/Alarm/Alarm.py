@@ -6,8 +6,7 @@ from loguru import logger
 import os
 import json
 from plyer import notification 
-import platform
-import asyncio
+# import asyncio
 
 class Alarm:
     def __init__(self,ProjectDir):

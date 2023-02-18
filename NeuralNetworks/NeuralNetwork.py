@@ -31,7 +31,7 @@ if os.path.exists(os.path.join(ProjectDir,'Datasets/ArtyomDataset.json')):
     TrainInput,TrainTarget = Preprocessing.PreprocessingText(Dictionary = dataset,mode = 'train')
     file.close()
 else:
-    raise RuntimeError
+    raise FileNotFoundError
 
 if os.path.exists(os.path.join(ProjectDir,'Settings/Settings.json')):
     file = open(os.path.join(ProjectDir,'Settings/Settings.json'),'r',encoding='utf-8')
@@ -40,7 +40,7 @@ if os.path.exists(os.path.join(ProjectDir,'Settings/Settings.json')):
     CATEGORIES_TARGET = DataFile['CATEGORIES_TARGET']
     file.close()
 else:
-    raise RuntimeError
+    raise FileNotFoundError
 
 
 learning_rate = 0.001
@@ -221,7 +221,7 @@ class NeuralNetwork:
             LED_Green()
         self.Training = False
         # Функция для вызова нейросети
-        network.predict(Preprocessing.PreprocessingText(PredictArray = ['скажи время'],mode = 'predict'))
+        network.predict(PreprocessingDataset(BaseCategoryPredict = True).PreprocessingText(PredictArray = ['скажи время'],mode = 'predict'))
 
     # Функция для вызова нейросети
     def predict(self,Input):
@@ -303,5 +303,5 @@ if __name__ == '__main__':
         elif command == "predict":
             Input = input("Question >>>")
             # Функция для вызова нейросети
-            network.predict(Preprocessing.PreprocessingText(PredictArray = [Input],mode = 'predict'))
+            network.predict(PreprocessingDataset(BaseCategoryPredict = True).PreprocessingText(PredictArray = [Input],mode = 'predict'))
     

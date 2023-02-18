@@ -33,7 +33,7 @@ class ArtyomAssistant():
         else:
             raise RuntimeError
         self.Network = NeuralNetwork(CATEGORIES = CATEGORIES,CATEGORIES_TARGET = CATEGORIES_TARGET)
-        self.Preprocessing = PreprocessingDataset()
+        self.Preprocessing = PreprocessingDataset(BaseCategoryPredict = True)
         self.Network.load()
         self.model = vosk.Model("model_small")
         self.queue = queue.Queue()

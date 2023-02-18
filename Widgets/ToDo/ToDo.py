@@ -2,7 +2,6 @@ import time
 import os
 from datetime import date
 import json
-import platform
 from loguru import logger
 from plyer import notification 
 

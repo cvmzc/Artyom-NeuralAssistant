@@ -12,7 +12,12 @@ from rich.progress import track
 ProjectDir = os.path.dirname(os.path.realpath(__file__))
 
 class PreprocessingDataset:
-    def __init__(self):
+    def __init__(self,BaseCategoryPredict:bool = None):
+        global InputDataset
+        if BaseCategoryPredict == True:
+            InputDatasetFile = open("Datasets/InputDataset.json", "r", encoding ='utf8')
+            InputDataset = json.load(InputDatasetFile)
+            InputDatasetFile.close()
         self.Dictionary = {}
         self.TrainInput = []
         self.TrainTarget = []
@@ -52,10 +57,6 @@ class PreprocessingDataset:
             InputDatasetFile = open("Datasets/SpeechInputDataset.json", "w", encoding ='utf-8')
             json.dump(self.y, InputDatasetFile,ensure_ascii=False,sort_keys=True, indent=2)
             InputDatasetFile.close()
-            # labelencoder=LabelEncoder()
-            # labelencoder = labelencoder.fit_transform(self.y)
-            # classes= list(labelencoder.classes_)
-            # VectorizedData = np.array(labelencoder)
             vectorizer = OneHotEncoder()
             vectorizer = vectorizer.fit_transform(np.array(self.y).reshape(-1,1))
             VectorizedData = vectorizer.toarray()
@@ -76,22 +77,14 @@ class PreprocessingDataset:
             return self.PredictInput
 
     def PreprocessingText(self,PredictArray:list = [],Dictionary:dict = {},mode = 'train'):
-        if os.path.exists(os.path.join(ProjectDir,'Datasets/ArtyomDataset.json')):
-            file = open(os.path.join(ProjectDir,'Datasets/ArtyomDataset.json'),'r',encoding='utf-8')
-            DataFile = json.load(file)
-            dataset = DataFile['dataset']
-            file.close()
-        else:
-            raise RuntimeError
-
         if os.path.exists(os.path.join(ProjectDir,'Settings/Settings.json')):
             file = open(os.path.join(ProjectDir,'Settings/Settings.json'),'r',encoding='utf-8')
             DataFile = json.load(file)
             CATEGORIES = DataFile['CATEGORIES']
-            CATEGORIES_TARGET = DataFile['CATEGORIES_TARGET']
             file.close()
         else:
-            raise RuntimeError
+            raise FileNotFoundError
+        
         self.Mode = mode
         if self.Mode == 'train' or self.Mode == 'test':
             self.Dictionary = list(Dictionary.items())
@@ -122,17 +115,13 @@ class PreprocessingDataset:
 
         elif self.Mode == 'predict':
             self.PredictArray = PredictArray
-            InputDatasetFile = open("Datasets/InputDataset.json", "r", encoding ='utf8')
-            DataFile = json.load(InputDatasetFile)
-            InputDatasetFile.close()
             vectorizer = TfidfVectorizer()
-            vectorizer.fit_transform(DataFile)
+            if InputDataset:
+                vectorizer.fit_transform(InputDataset)
+            else:
+                InputDatasetFile = open("Datasets/InputDataset.json", "r", encoding ='utf8')
+                InputDataset = json.load(InputDatasetFile)
+                InputDatasetFile.close()
+                vectorizer.fit_transform(InputDataset)
             self.PredictInput = self.ToMatrix(vectorizer.transform(self.PredictArray).toarray())
             return self.PredictInput
-# clf.predict(X[:2, :])
-# TrainInput,TrainTarget = PreprocessingDataset().PreprocessingAudio(PathAudio="C:/Users/Blackflame576/Documents/Blackflame576/DigitalBit/Artyom-NeuralAssistant/Datasets/SpeechDataset/")
-# x = np.linspace(0, 2*np.pi, 8)
-# y = np.sin(x) + np.random.normal(0, 0.4, 8)
-# from sklearn.linear_model import LogisticRegression
-# clf = LogisticRegression(random_state=0).fit(TrainInput,TrainTarget)
-# clf.score(TrainInput,np.array(TrainTarget).reshape(-1,1))
