@@ -11,7 +11,7 @@ import sys
 # Подготовка датасета
 ProjectDir = os.path.dirname(os.path.realpath(__file__))
 if os.path.exists(os.path.join(ProjectDir,'Datasets/ArtyomDataset.json')):
-    file = open('Datasets/ArtyomDataset.json','r',encoding='utf-8')
+    file = open(os.path.join(ProjectDir,'Datasets/ArtyomDataset.json'),'r',encoding='utf-8')
     Preprocessing = PreprocessingDataset()
     DataFile = json.load(file)
     dataset = DataFile['dataset']
