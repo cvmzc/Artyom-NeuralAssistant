@@ -7,6 +7,7 @@ import os
 import json
 from plyer import notification 
 import platform
+import asyncio
 
 class Alarm:
     def __init__(self,ProjectDir):
@@ -28,7 +29,7 @@ class Alarm:
             json.dump(self.Alarms,file,ensure_ascii=False,sort_keys=True, indent=2)
             file.close()
 
-    def Notification(self,title,message):
+    async def Notification(self,title,message):
         notification.notify(  
             title = title,  
             message = message,  
@@ -37,26 +38,26 @@ class Alarm:
             toast = False  
         ) 
 
-    def UpdateDate(self):
+    async def UpdateDate(self):
         self.LocalDate = date.today().strftime("%B %d, %Y")
 
-    def UpdateTime(self):
+    async def UpdateTime(self):
         self.LocalTime = str(time.strftime("%H") + ":" + time.strftime("%M"))
 
-    def UpdateAlarm(self):
+    async def UpdateAlarm(self):
         file = open(os.path.join(self.ProjectDir,'AssistantConfig/Alarm.json'),'r',encoding='utf-8')
         self.Alarms = json.load(file)
         file.close()
     
-    def SaveAlarms(self):
+    async def SaveAlarms(self):
         file = open(os.path.join(self.ProjectDir,'AssistantConfig/Alarm.json'),"w")
         json.dump(self.Alarms,file,ensure_ascii=False,sort_keys=True, indent=2)
         file.close()
 
-    def CreateAlarm(self,date:str = date.today().strftime("%B %d, %Y"),time:str = str(time.strftime("%H") + ":" + time.strftime("%M"))):
-        self.UpdateAlarm()
-        self.UpdateDate()
-        self.UpdateTime()
+    async def CreateAlarm(self,date:str = date.today().strftime("%B %d, %Y"),time:str = str(time.strftime("%H") + ":" + time.strftime("%M"))):
+        await self.UpdateAlarm()
+        await self.UpdateDate()
+        await self.UpdateTime()
         if date in self.Alarms["alarms"]:
             if not time in self.Alarms["alarms"][date]:
                 self.Alarms["alarms"][date].append(time)
@@ -66,38 +67,38 @@ class Alarm:
                             date:[time]
                 }
             )
-        self.SaveAlarms()
+        await self.SaveAlarms()
 
-    def RemoveAlarm(self,date,time):
-        self.UpdateAlarm()
+    async def RemoveAlarm(self,date,time):
+        await self.UpdateAlarm()
         if date in self.Alarms["alarms"]:
             if time in self.Alarms["alarms"][date]:
                 if len(self.Alarms["alarms"][date]) >= 2:
                     self.Alarms["alarms"][date].remove(time)
-                    self.SaveAlarms()
+                    await self.SaveAlarms()
                 elif len(self.Alarms["alarms"][date]) == 1:
                     self.Alarms["alarms"].pop(date)
-                    self.SaveAlarms()
+                    await self.SaveAlarms()
 
-    def RingAlarm(self):
+    async def RingAlarm(self):
         AudioData,sample_rate = sf.read(AudioPath,dtype = 'float32')
         sd.play(AudioData,sample_rate)
         StatusAudio = sd.wait()
 
-    def CheckAlarm(self):
-        self.UpdateAlarm()
+    async def CheckAlarm(self):
+        await self.UpdateAlarm()
         while True:
-            self.UpdateDate()
-            self.UpdateTime()
+            await self.UpdateDate()
+            await self.UpdateTime()
             if self.LocalDate in self.Alarms["alarms"]:
                 for TimeAlarm in self.Alarms["alarms"][self.LocalDate]:
                     if TimeAlarm == self.LocalTime:
-                        self.Notification(title = "Будильник",message = self.LocalTime)
-                        self.RingAlarm()
-                        self.RemoveAlarm(self.LocalDate,self.LocalTime)
+                        await self.Notification(title = "Будильник",message = self.LocalTime)
+                        await self.RingAlarm()
+                        await self.RemoveAlarm(self.LocalDate,self.LocalTime)
                         
 
 # if __name__ == "__main__":
-#     alarm = Alarm()
-#     alarm.CreateAlarm(time = "23:11")
-#     alarm.CheckAlarm()
+#     AsyncioLoop = asyncio.get_event_loop()
+#     alarm = Alarm(os.getcwd())
+#     AsyncioLoop.run_until_complete(alarm.CreateAlarm(time = "23:11"))
