@@ -3,7 +3,7 @@
 posts.csv
 # /model_small/
 /Datasets/train.dataset
-/ImageDetection/Datasets/train.dataset
+/NeuralNetworks/ObjectDetection/Datasets/train.dataset
 # /Datasets/InputDataset.json
 
 # Byte-compiled / optimized / DLL files
