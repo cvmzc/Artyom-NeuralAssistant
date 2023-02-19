@@ -1,7 +1,7 @@
 /RuBQ
 /Datasets/SpeechDataset/
 posts.csv
-/model/
+# /model_small/
 /Datasets/train.dataset
 /ImageDetection/Datasets/train.dataset
 # /Datasets/InputDataset.json

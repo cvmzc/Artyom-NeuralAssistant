@@ -77,6 +77,7 @@ class PreprocessingDataset:
             return self.PredictInput
 
     def PreprocessingText(self,PredictArray:list = [],Dictionary:dict = {},mode = 'train'):
+        global InputDataset
         if os.path.exists(os.path.join(ProjectDir,'Settings/Settings.json')):
             file = open(os.path.join(ProjectDir,'Settings/Settings.json'),'r',encoding='utf-8')
             DataFile = json.load(file)

@@ -10,7 +10,6 @@ from loguru import logger
 import platform
 import time
 from threading import Thread
-import multiprocessing
 
 hostname = (platform.uname()[1]).lower()
 if hostname.startswith("rpi"):
@@ -199,10 +198,12 @@ class NeuralNetwork:
             self.Loss = np.sum(self.CrossEntropy(self.OutputLayer, TrainTarget))
             # Сохранение модели с наименьшей ошибкой
             if epoch % (EPOCHS / 20) == 0 and self.Loss <= self.LocalLoss:
+                logger.info(f"Neural network was saved at epoch {epoch}")
                 self.LocalLoss = self.Loss
                 self.save()
             # Добавление ошибки в массив для дальнейшего вывода графика ошибки нейросети
             self.LossArray.append(self.Loss)
+        self.save()
         # Вывод графика ошибки нейросети
         plt.plot(self.LossArray)
         # plt.show() 
@@ -296,7 +297,7 @@ if __name__ == '__main__':
         elif command == "train":
             # Вызов функции тренировки нейросети
             if network.Training == False:
-                TrainProcess = multiprocessing.Process(target=network.train, args=(TrainInput,TrainTarget))
+                TrainProcess = Thread(target=network.train, args=(TrainInput,TrainTarget,))
                 TrainProcess.start()
             else:
                 print("Neural Network is already training")
