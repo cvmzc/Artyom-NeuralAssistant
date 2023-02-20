@@ -218,7 +218,7 @@ class Core:
                 print(temp_str)
                 await self.Tell(str(temp_str))
     async def WikiCommand(self,text):
-        wikipedia.summary(text)
+        wikipedia.summary(text, sentences = 2)
     
     async def News(self):
         file = open("AssistantConfig/News.json","r")

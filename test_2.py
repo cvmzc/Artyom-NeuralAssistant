@@ -31,5 +31,30 @@
 # wind = weather.wind()["speed"]
 # wind = f"{wind} метров в секунду"
 # humidity = str(weather.humidity) + " процентов"
-import sys
-print(sys.argv[1])
+# 3
+import json
+import os
+ProjectDir = os.path.dirname(os.path.realpath(__file__))
+DatasetFile = open('NeuralNetworks/Datasets/ArtyomDataset.json','r',encoding="utf-8")
+Dataset = json.load(DatasetFile)
+DatasetFile.close()
+AdditionalDatasetFile = open(os.path.join(ProjectDir,"NeuralNetworks/Datasets/RuBQ_2.0.json"),"r",encoding="utf-8")
+AdditionalDataset = json.load(AdditionalDatasetFile)
+AdditionalDatasetFile.close()
+
+AdditionalDatasetFile_2 = open(os.path.join(ProjectDir,"NeuralNetworks/Datasets/RuBQ_2.0_test.json"),"r",encoding="utf-8")
+AdditionalDataset_2 = json.load(AdditionalDatasetFile_2)
+AdditionalDatasetFile_2.close()
+for Group in AdditionalDataset[:4096]:
+    # for symbol in symbols:
+    Question = (Group["question_text"]).replace('"',"")
+    Dataset["dataset"]["wikipedia"]["questions"].append(Question)
+    print(Question)
+for Group in AdditionalDataset_2[:4096]:
+    Question_2 = (Group["question_text"]).replace('"',"")
+    Dataset["dataset"]["wikipedia"]["questions"].append(Question_2)
+    print(Question_2)
+print(Dataset)
+DatasetFile = open("NeuralNetworks/Datasets/ArtyomDataset.json","w",encoding="utf-8")
+json.dump(Dataset,DatasetFile,ensure_ascii=False, indent=2,sort_keys=True)
+DatasetFile.close()
