@@ -228,7 +228,7 @@ class NeuralNetwork:
     def predict(self,Input):
         PredictedArray = self.FeedForward(Input)
         PredictedValue = np.argmax(PredictedArray)
-        if float(PredictedArray[0][PredictedValue]) >= MinimalThreshold:
+        if 1>0:#float(PredictedArray[0][PredictedValue]) >= MinimalThreshold:
             print(self.CATEGORIES_TARGET[str(PredictedValue)])
             return self.CATEGORIES_TARGET[str(PredictedValue)],PredictedValue
         else:
