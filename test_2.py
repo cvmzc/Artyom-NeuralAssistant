@@ -3,14 +3,14 @@
 # import os
 # import json
 # ProjectDir = os.path.dirname(os.path.realpath(__file__))
-# DatasetFile = open(os.path.join(ProjectDir,'Datasets/ArtyomDataset3.json'),'r',encoding="utf-8")
+# DatasetFile = open(os.path.join(ProjectDir,'NeuralNetworks/Datasets/ArtyomDataset.json'),'r',encoding="utf-8")
 # Dataset = json.load(DatasetFile)
 # DatasetFile.close()
-# CommunicationDataset = pd.read_csv(os.path.join(ProjectDir,'Datasets/CommunicationDataset.tsv'),sep = '\t')
-# for value in CommunicationDataset.reply[:4096]:
+# CommunicationDataset = pd.read_csv(os.path.join(ProjectDir,'NeuralNetworks/Datasets/CommunicationDataset.tsv'),sep = '\t')
+# for value in CommunicationDataset.reply[:256]:
 #     Dataset["dataset"]["communication"]["questions"].append(value)
 #     print(value)
-# DatasetFile = open(os.path.join(ProjectDir,"Datasets/ArtyomDataset3.json"),"w",encoding="utf-8")
+# DatasetFile = open(os.path.join(ProjectDir,"NeuralNetworks/Datasets/ArtyomDataset.json"),"w",encoding="utf-8")
 # json.dump(Dataset,DatasetFile,ensure_ascii=False, indent=2,sort_keys=True)
 # DatasetFile.close
 # 2
@@ -45,7 +45,7 @@ AdditionalDatasetFile.close()
 AdditionalDatasetFile_2 = open(os.path.join(ProjectDir,"NeuralNetworks/Datasets/RuBQ_2.0_test.json"),"r",encoding="utf-8")
 AdditionalDataset_2 = json.load(AdditionalDatasetFile_2)
 AdditionalDatasetFile_2.close()
-for Group in AdditionalDataset[:4096]:
+for Group in AdditionalDataset[:256]:
     # for symbol in symbols:
     Question = (Group["question_text"]).replace('"',"")
     Dataset["dataset"]["wikipedia"]["questions"].append(Question)
