@@ -120,16 +120,7 @@ class Core:
         await self.Tell(random.choice(ANSWERS['gratitude']))
     
     async def VSCodeCommand(self):
-        if platform.system() == 'Windows':
-            if os.path.exists(os.path.join(UserDir,'/AppData/Local/Programs/Microsoft VS Code/Code.exe')):
-                await self.Tell(random.choice(ANSWERS['vscode']))
-                os.startfile(os.path.join(UserDir,'/AppData/Local/Programs/Microsoft VS Code/Code.exe'))
-            else:
-                await self.Tell(random.choice(['У вас не установлена эта программа','Редактор кода не установлен на этом компьютере','Программа не установлена на этом компьютере']))
-        elif platform.system() == 'Linux':
-            await self.Tell("Эта функция пока не доступна")
-        elif platform.system() == 'Darwin':
-            await self.Tell("Эта функция пока не доступна")
+        os.system("code")
 
     async def YoutubeCommand(self):
         await self.Tell(random.choice(ANSWERS['youtube']))
@@ -218,7 +209,11 @@ class Core:
                 print(temp_str)
                 await self.Tell(str(temp_str))
     async def WikiCommand(self,text):
-        wikipedia.summary(text, sentences = 2)
+        Answer = wikipedia.summary(text, sentences = 2)
+        if len(Answer.split()) > 0:
+            await self.Tell(Answer)
+        else:
+            webbrowser.open(f"https://www.google.com/search?q={text}")
     
     async def News(self):
         file = open("AssistantConfig/News.json","r")

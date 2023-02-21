@@ -46,7 +46,7 @@ class PreprocessingDataset:
                         self.AudioFile = os.path.join(root,file)
                         audio,sample_rate = librosa.load(self.AudioFile,mono=True)
                         # print(audio)
-                        mfcc = librosa.feature.mfcc(y = audio, sr = sample_rate)
+                        mfcc = librosa.feature.mfcc(y = audio,n_fft=512,n_mfcc=13,n_mels=40,hop_length=160,fmin=0,fmax=None,htk=False, sr = sample_rate)
                         mfcc = np.mean(mfcc.T,axis=0)
                         self.x.append(np.array(mfcc))
                     elif file.endswith('.txt'):
