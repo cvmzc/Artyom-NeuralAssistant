@@ -15,7 +15,7 @@ class PreprocessingDataset:
     def __init__(self,BaseCategoryPredict:bool = None):
         global InputDataset
         if BaseCategoryPredict == True:
-            InputDatasetFile = open("Datasets/InputDataset.json", "r", encoding ='utf8')
+            InputDatasetFile = open(os.path.join(ProjectDir,'Datasets/InputDataset.json'), "r", encoding ='utf8')
             InputDataset = json.load(InputDatasetFile)
             InputDatasetFile.close()
         self.Dictionary = {}
