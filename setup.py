@@ -4,7 +4,7 @@ from cx_Freeze import setup, Executable
 
 executables = [Executable('Artyom.py')]
 
-excludes = ['unicodedata', 'urllib','pytorch','silero''xml', 'bz2']
+excludes = ['unicodedata', 'urllib','torch','silero''xml', 'bz2']
 
 options = {
     'build_exe': {
