@@ -42,8 +42,8 @@ else:
     raise FileNotFoundError
 
 
-learning_rate = 0.002
-EPOCHS = 500000
+learning_rate = 0.001
+EPOCHS = 150000
 BATCH_SIZE = 50
 MinimalThreshold = 0.3
 FunctionTimes = []
@@ -56,7 +56,7 @@ class NeuralNetwork:
         self.CATEGORIES = CATEGORIES
         self.CATEGORIES_TARGET = CATEGORIES_TARGET
         self.INPUT_DIM = 64
-        self.HIDDEN_DIM = 512
+        self.HIDDEN_DIM = 256
         self.OUTPUT_DIM = len(CATEGORIES_TARGET)
         self.GenerateWeights()
         self.LossArray = []
