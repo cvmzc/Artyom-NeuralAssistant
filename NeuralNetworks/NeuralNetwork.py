@@ -42,8 +42,8 @@ else:
     raise FileNotFoundError
 
 
-learning_rate = 0.001
-EPOCHS = 50000
+learning_rate = 0.002
+EPOCHS = 400000
 BATCH_SIZE = 50
 MinimalThreshold = 0.3
 FunctionTimes = []
