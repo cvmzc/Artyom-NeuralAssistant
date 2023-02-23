@@ -43,7 +43,7 @@ else:
 
 
 learning_rate = 0.002
-EPOCHS = 400000
+EPOCHS = 500000
 BATCH_SIZE = 50
 MinimalThreshold = 0.3
 FunctionTimes = []

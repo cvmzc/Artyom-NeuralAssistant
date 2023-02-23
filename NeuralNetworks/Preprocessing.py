@@ -7,6 +7,7 @@ import random
 import librosa
 from sklearn.preprocessing import LabelEncoder,OneHotEncoder
 from rich.progress import track
+import pandas
 
 # Подготовка датасета
 ProjectDir = os.path.dirname(os.path.realpath(__file__))
@@ -35,9 +36,39 @@ class PreprocessingDataset:
     def ToNumpyArray(self,array):
         return np.array(array)
 
-    def PreprocessingAudio(self,PathAudio:str,mode:str = 'train'):
-        self.Mode = mode
+    def ASR_Preprocessing(self,PathAudio:str,Mode:str = 'train'):
+        pass
+
+    def TTS_Preprocessing(self,PathAudio:str,Mode:str = 'train'):
         self.PathAudio = PathAudio
+        self.Mode = Mode
+        if self.Mode == "train":
+            self.DatasetFiles = list(os.walk(self.PathAudio))
+            for (root,dirs,files) in track(os.walk(self.PathAudio,topdown=True),description='[green]Preprocessing'):
+                for file in files:
+                    if file.endswith('.wav'):
+                        self.AudioFile = os.path.join(root,file)
+                        audio,sample_rate = librosa.load(self.AudioFile,mono=True)
+                        # print(audio)
+                        mfcc = librosa.feature.mfcc(y = audio,n_fft=512,n_mfcc=13,n_mels=40,hop_length=160,fmin=0,fmax=None,htk=False, sr = sample_rate)
+                        mfcc = np.mean(mfcc.T,axis=0)
+                        self.x.append(np.array(mfcc))
+                    elif file.endswith('.txt'):
+                        file = open(os.path.join(root,file),'r+',encoding="utf-8")
+                        DataFile = file.read()
+                        self.y.append(DataFile)
+                        file.close()
+            InputDatasetFile = open("Datasets/TTSInputDataset.json", "w", encoding ='utf-8')
+            json.dump(self.y, InputDatasetFile,ensure_ascii=False,sort_keys=True, indent=2)
+            InputDatasetFile.close()
+        elif self.Mode == "predict":
+            pass
+
+    def PreprocessingAudio(self,PathAudio:str,mode:str = 'train',TypeSpeech:str = 'TTS'):
+        if TypeSpeech == "TTS":
+            self.TTS_Preprocessing(PathAudio = PathAudio,Mode = mode)
+        elif TypeSpeech == "ASR":
+            self.ASR_Preprocessing(PathAudio = PathAudio,Mode = mode)
         if self.Mode == 'train' or self.Mode == 'test':
             self.DatasetFiles = list(os.walk(self.PathAudio))
             for (root,dirs,files) in track(os.walk(self.PathAudio,topdown=True),description='[green]Preprocessing'):
@@ -54,15 +85,9 @@ class PreprocessingDataset:
                         DataFile = file.read()
                         self.y.append(DataFile)
                         file.close()
-            InputDatasetFile = open("Datasets/SpeechInputDataset.json", "w", encoding ='utf-8')
+            InputDatasetFile = open("Datasets/TTSInputDataset.json", "w", encoding ='utf-8')
             json.dump(self.y, InputDatasetFile,ensure_ascii=False,sort_keys=True, indent=2)
             InputDatasetFile.close()
-            vectorizer = OneHotEncoder()
-            vectorizer = vectorizer.fit_transform(np.array(self.y).reshape(-1,1))
-            VectorizedData = vectorizer.toarray()
-            self.TrainTarget = np.array(VectorizedData,dtype="int")
-            self.TrainInput = self.ToMatrix(self.x)
-            return self.TrainInput,self.TrainTarget
             
         elif self.Mode == 'predict':
             # InputDatasetFile = open("Datasets/SpeechInputDataset.json", "r", encoding ='utf8')

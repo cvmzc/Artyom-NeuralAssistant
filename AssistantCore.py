@@ -24,6 +24,7 @@ sys.path.append(os.path.join(os.path.dirname(os.path.realpath(__file__)),"Widget
 from Widgets.CreateProjects.CreateProjects import StartWidget
 import threading
 import multiprocessing
+from Transforms.FilteringTransforms import FilteringTransforms
 
 # Инициализация параметров
 ProjectDir = os.path.dirname(os.path.realpath(__file__))
@@ -64,6 +65,7 @@ class Core:
         self.timer = Timer()
         self.stopwatch = Stopwatch()
         self.CommunicationNetwork = CommunicationNetwork()
+        self.FilteringTransform = FilteringTransforms()
         ThreadCommunicationFit = threading.Thread(target = self.CommunicationNetwork.Start).start()
     
     async def Tell(self,text):
@@ -89,15 +91,9 @@ class Core:
             TransformedText = text
             return TransformedText,Nums
         elif to_words == True:
-            TransformedText = ""
-            Words = []
-            LocalText = text.split()
-            for number in LocalText:
-                if number in Transforms["Nums"]:
-                    Words.append(Transforms["Nums"][number])
-                    text = text.replace(number,str(Transforms["Nums"][number]))
-            TransformedText = text
+            TransformedText = self.FilteringTransform.to_words(text)
             return TransformedText
+        
         elif from_date == True:
             TransformedText = ""
             Words = []
