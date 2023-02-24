@@ -55,7 +55,8 @@ class Core:
         self.Functions = {
             'communication':self.CommunicationCommand,'weather':self.WeatherCommand,
             "c++_project":self.CppProject,"django_project":self.DjangoProject,"python_project":self.PythonProject,"NodeJS_project":self.NodeJSProject,
-            "rust_project":self.RustProject,"c_project":self.CProject,"go_project":self.GoProject,"java_project":self.JavaProject
+            "rust_project":self.RustProject,"c_project":self.CProject,"go_project":self.GoProject,"java_project":self.JavaProject,
+            "terminal":self.OpenTerminal,"pycharm":self.OpenPyCharm
         }
         self.model, _ = torch.hub.load(repo_or_dir='snakers4/silero-models',
                           model='silero_tts',
@@ -90,6 +91,7 @@ class Core:
                     text = text.replace(word,str(Transforms["Words"][word]))
             TransformedText = text
             return TransformedText,Nums
+        
         elif to_words == True:
             TransformedText = self.FilteringTransform.to_words(text)
             return TransformedText
@@ -125,6 +127,23 @@ class Core:
     async def WebbrowserCommand(self):
         await self.Tell(random.choice(ANSWERS['webbrowser']))
         webbrowser.open_new_tab('https://google.com')
+
+    async def OpenPyCharm(self):
+        await self.Tell(random.choice(ANSWERS['pycharm']))
+        if platform.system() == "Windows":
+            os.system("pycharm .")
+        elif platform.system() == "Linux":
+            pass
+        elif platform.system() == "Darwin":
+            pass
+    
+    async def OpenTerminal(self):
+        if platform.system() == "Windows":
+            os.startfile(r"C:\Windows\system32\cmd.exe")
+        elif platform.system() == "Linux":
+            pass
+        elif platform.system() == "Darwin":
+            pass
 
     # Скриншот
     async def ScreenShotCommand(self):
@@ -204,6 +223,7 @@ class Core:
                 temp_str = await self.FilteringTransforms(f'Сейчас {temp} градуса',to_words=True)
                 print(temp_str)
                 await self.Tell(str(temp_str))
+                
     async def WikiCommand(self,text):
         Answer = wikipedia.summary(text, sentences = 2)
         if len(Answer.split()) > 0:
