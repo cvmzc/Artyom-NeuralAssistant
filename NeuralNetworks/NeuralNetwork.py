@@ -13,7 +13,7 @@ from threading import Thread
 
 hostname = (platform.uname()[1]).lower()
 if hostname.startswith("rpi"):
-    from LED_RPI import LED_Green,LED_Red,LED_Yellow,Clean
+    from NeuralNetworks.LED_RPI import LED_Green,LED_Red,LED_Yellow,Clean
 
 plt.style.use("cyberpunk")
 np.random.seed(0)

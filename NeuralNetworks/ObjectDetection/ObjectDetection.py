@@ -12,7 +12,7 @@ from loguru import logger
 import platform
 hostname = (platform.uname()[1]).lower()
 if hostname.startswith("rpi"):
-    from LED_RPI import LED_Green,LED_Red,LED_Yellow,Clean
+    from NeuralNetworks.LED_RPI import LED_Green,LED_Red,LED_Yellow,Clean
 
 # Параметры для нейросети
 learning_rate = 0.0002
@@ -23,7 +23,7 @@ MinimalThreshold = 0.3
 plt.style.use("cyberpunk")
 np.random.seed(0)
 
-ProjectDir = os.getcwd()
+ProjectDir = os.path.dirname(os.path.realpath(__file__))
 logger.add(os.path.join(ProjectDir,'Logs/ImageDetection.log'),format="{time} {level} {message}",level="INFO",rotation="200 MB",diagnose=True)
 
 def unpickle(file):
@@ -32,8 +32,8 @@ def unpickle(file):
     return myDict
 
 # Подготовка датасета
-TrainData = unpickle('Datasets/train.dataset')
-TestData = unpickle('Datasets/test.dataset')
+TrainData = unpickle(os.path.join(ProjectDir,'Datasets/train.dataset'))
+TestData = unpickle(os.path.join(ProjectDir,'Datasets/test.dataset'))
 TrainInput = TrainData["data"][:200]
 TestInput = TestData["data"][:200]
 # MetaData = unpickle('meta')
@@ -271,14 +271,15 @@ class DetectionNeuralNetwork:
         return OneHotValue
 
     def FeedForward(self,Input):
-        try:
+        # try:
+            print(Input.shape)
             self.h1 = Input @ self.w1 + self.b1
             self.HiddenLayer = self.sigmoid(self.h1)
             self.o = self.HiddenLayer @ self.w2 + self.b2
             self.OutputLayer = self.softmax(self.o)
             return self.OutputLayer
-        except Exception as Error:
-            logger.error(f"Exception error: {Error}.")
+        # except Exception as Error:
+        #     logger.error(f"Exception error: {Error}.")
 
     def BackwardPropagation(self,Input,Target):
         try:
@@ -305,7 +306,7 @@ class DetectionNeuralNetwork:
         logger.info("Neural network was started of training.")
         # Генераци весов нейросети по длине входного массива(датасета)
         self.INPUT_DIM = len(TrainInput[0])
-        # print(self.INPUT_DIM)
+        print(self.INPUT_DIM)
         self.GenerateWeights()
 
         conv = Conv(8)
@@ -322,15 +323,15 @@ class DetectionNeuralNetwork:
                 # Вызов функции для расчёта прямого распространения нейросети
                 Input = conv.forward((Input/255) - 0.5)
                 Input = pool.forward(Input)
-                Input = softmax.forward(Input)
+                # Input = self.softmax(Input)
                 PredictedValue = self.FeedForward(Input)
                 # Вызов функции для расчёта обратного распространения ошибки нейросети
                 gradient = np.zeros(10)
                 gradient[Target] = -1/Input[Target]
-                
+                print(len(gradient))
                 
                 #Backprop
-                gradient = softmax.backprop(gradient, learning_rate)
+                gradient = softmax.forward(gradient, learning_rate)
                 gradient = pool.backprop(gradient)
                 gradient = conv.backprop(gradient, learning_rate)
                 self.BackwardPropagation(Input,Target)
