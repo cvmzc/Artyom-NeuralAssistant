@@ -1,7 +1,19 @@
+# -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 
-from .base import FilteringTransforms_Base
-from .utils import get_digits, splitbyx
+from base import FilteringTransforms_Base,TranslitLanguagePack, registry
+from utils import get_digits, splitbyx,translit
+from languages.ru import data
+
+class RussianLanguagePack(TranslitLanguagePack):
+    language_code = "ru"
+    language_name = "Russian"
+    character_ranges = ((0x0400, 0x04FF), (0x0500, 0x052F))
+    mapping = data.mapping
+    reversed_specific_mapping = data.reversed_specific_mapping
+    pre_processor_mapping = data.pre_processor_mapping
+    detectable = True
+
 
 ZERO = ('ноль',)
 
@@ -80,6 +92,9 @@ THOUSANDS = {
 
 
 class FilteringTransforms(FilteringTransforms_Base):
+    def __init__(self):
+        super().__init__()
+        registry.register(RussianLanguagePack)
     CURRENCY_FORMS = {
         'RUB': (
             ('рубль', 'рубля', 'рублей'), ('копейка', 'копейки', 'копеек')
@@ -234,3 +249,7 @@ class FilteringTransforms(FilteringTransforms_Base):
                 words.append(self.pluralize(x, THOUSANDS[i]))
 
         return ' '.join(words)
+    
+    def english_to_russian(self,text):
+        answer = translit(text,"ru")
+        return answer

@@ -131,7 +131,7 @@ class Core:
     async def OpenPyCharm(self):
         await self.Tell(random.choice(ANSWERS['pycharm']))
         if platform.system() == "Windows":
-            os.system("pycharm .")
+            os.system("pycharm")
         elif platform.system() == "Linux":
             pass
         elif platform.system() == "Darwin":
@@ -139,11 +139,13 @@ class Core:
     
     async def OpenTerminal(self):
         if platform.system() == "Windows":
+            await self.Tell(random.choice(ANSWERS['terminal']))
             os.startfile(r"C:\Windows\system32\cmd.exe")
         elif platform.system() == "Linux":
             pass
         elif platform.system() == "Darwin":
-            pass
+            await self.Tell(random.choice(ANSWERS['terminal']))
+            os.startfile("/Applications/Utilities/Terminal.app")
 
     # Скриншот
     async def ScreenShotCommand(self):
@@ -223,7 +225,7 @@ class Core:
                 temp_str = await self.FilteringTransforms(f'Сейчас {temp} градуса',to_words=True)
                 print(temp_str)
                 await self.Tell(str(temp_str))
-                
+
     async def WikiCommand(self,text):
         Answer = wikipedia.summary(text, sentences = 2)
         if len(Answer.split()) > 0:

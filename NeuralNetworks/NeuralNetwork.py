@@ -21,17 +21,6 @@ np.random.seed(0)
 ProjectDir = os.path.dirname(os.path.realpath(__file__))
 logger.add(os.path.join(ProjectDir,'Logs/NeuralNetwork.log'),format="{time} {level} {message}",level="INFO",rotation="200 MB",diagnose=True)
 
-# Подготовка датасета
-if os.path.exists(os.path.join(ProjectDir,'Datasets/ArtyomDataset.json')):
-    file = open(os.path.join(ProjectDir,'Datasets/ArtyomDataset.json'),'r',encoding='utf-8')
-    Preprocessing = PreprocessingDataset()
-    DataFile = json.load(file)
-    dataset = DataFile['dataset']
-    TrainInput,TrainTarget = Preprocessing.PreprocessingText(Dictionary = dataset,mode = 'train')
-    file.close()
-else:
-    raise FileNotFoundError
-
 if os.path.exists(os.path.join(ProjectDir,'Settings/Settings.json')):
     file = open(os.path.join(ProjectDir,'Settings/Settings.json'),'r',encoding='utf-8')
     DataFile = json.load(file)
@@ -295,6 +284,16 @@ if __name__ == '__main__':
                 LED_Green()
             break
         elif command == "train":
+            # Подготовка датасета
+            if os.path.exists(os.path.join(ProjectDir,'Datasets/ArtyomDataset.json')):
+                file = open(os.path.join(ProjectDir,'Datasets/ArtyomDataset.json'),'r',encoding='utf-8')
+                Preprocessing = PreprocessingDataset()
+                DataFile = json.load(file)
+                dataset = DataFile['dataset']
+                TrainInput,TrainTarget = Preprocessing.PreprocessingText(Dictionary = dataset,mode = 'train')
+                file.close()
+            else:
+                raise FileNotFoundError
             # Вызов функции тренировки нейросети
             if network.Training == False:
                 TrainProcess = Thread(target=network.train, args=(TrainInput,TrainTarget,))
