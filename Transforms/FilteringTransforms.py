@@ -253,3 +253,8 @@ class FilteringTransforms(FilteringTransforms_Base):
     def english_to_russian(self,text):
         answer = translit(text,"ru")
         return answer
+
+    def group_normalize(self,text):
+        self.text = self.to_words(text)
+        self.text = self.english_to_russian(self.text)
+        return self.text

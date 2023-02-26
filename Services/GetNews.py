@@ -4,6 +4,7 @@ from loguru import logger
 import json
 import os
 import time
+import sys
 
 class ParseNews:
     def __init__(self,ProjectDir) -> None:
@@ -12,6 +13,10 @@ class ParseNews:
         self.NewsArray = []
         self.itNewsArray = {}
         self.ProjectDir = ProjectDir
+        sys.path.append(self.ProjectDir)
+        sys.path.append(os.path.join(self.ProjectDir,"Transforms"))
+        from Transforms.FilteringTransforms import FilteringTransforms
+        self.Transform = FilteringTransforms()
 
     def News(self):
         r = requests.get(self.NewsURL).text
@@ -34,6 +39,7 @@ class ParseNews:
             time.sleep(1)
             for span in content:
                 title = span.text.replace('"','')
+                title = self.Transform.group_normalize(title)
                 time.sleep(1)
                 link = span.get("href")
                 time.sleep(1)
@@ -47,11 +53,16 @@ class ParseNews:
                     time.sleep(1)
                     text = x.text
                     if text != None and text != '' and not title in self.itNewsArray:
+                        text = self.Transform.group_normalize(text)
                         self.itNewsArray.update({title:[text]})
+                    else:
+                        continue
                     time.sleep(1)
                 time.sleep(1)
         except:
-            pass
+            file = open(os.path.join(self.ProjectDir,"AssistantConfig/IT_News.json"),"w",encoding="utf-8")
+            json.dump(self.itNewsArray,file,ensure_ascii=False,sort_keys=True, indent=2)
+            file.close()
         print(self.itNewsArray)
             # for s in page.find('div', class_='tm-article-body').find_all('p'):
             #     print(s.text)
@@ -59,15 +70,13 @@ class ParseNews:
 
             # text = await self.FilteringTransforms(text,to_words=True)
         #     self.itNewsArray.append(text)
-        # file = open(os.path.join(self.ProjectDir,"AssistantSettings/IT_News.json"),"w",encoding="utf-8")
-        # json.dump(self.itNewsArray,file,ensure_ascii=False,sort_keys=True, indent=2)
-        # file.close()
+        
 
     def StartParse(self):
         self.News()
         self.it_news()
 
 if __name__ == "__main__":
-    Parse = ParseNews(os.path.dirname(os.path.realpath(__file__)))
+    Parse = ParseNews(r"C:\Users\Blackflame576\Documents\Blackflame576\DigitalBit\Artyom-NeuralAssistant")
     Parse.it_news()
     # Parse.StartParse()
