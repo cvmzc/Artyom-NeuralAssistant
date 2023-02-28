@@ -45,7 +45,7 @@ class NeuralNetwork:
         self.CATEGORIES = CATEGORIES
         self.CATEGORIES_TARGET = CATEGORIES_TARGET
         self.INPUT_DIM = 64
-        self.HIDDEN_DIM = 1536
+        self.HIDDEN_DIM = 1024
         self.OUTPUT_DIM = len(CATEGORIES_TARGET)
         self.GenerateWeights()
         self.LossArray = []
