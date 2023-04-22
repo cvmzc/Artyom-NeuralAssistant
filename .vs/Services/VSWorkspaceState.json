@@ -1,0 +1,8 @@
+{
+  "OutputFoldersPerTargetSystem": {
+    "Локальный компьютер": [
+      "Services\\out\\build\\x64-Debug",
+      "Services\\out\\install\\x64-Debug"
+    ]
+  }
+}

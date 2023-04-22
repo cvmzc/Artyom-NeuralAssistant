@@ -1,0 +1,3887 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="services\EventSystem.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\build\cmakefiles\3.25.1\compileridc\CMakeCCompilerId.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\build\cmakefiles\3.25.1\compileridcxx\CMakeCXXCompilerId.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\build-scripts\gen_audio_channel_conversion.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\build-scripts\gen_audio_resampler_filter.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\cmake\test\main_cli.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\cmake\test\main_gui.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\cmake\test\main_lib.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\SDL.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\SDL_assert.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\SDL_dataqueue.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\SDL_error.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\SDL_guid.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\SDL_hints.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\SDL_list.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\SDL_log.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\SDL_utils.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\atomic\SDL_atomic.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\atomic\SDL_spinlock.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\audio\SDL_audio.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\audio\SDL_audiocvt.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\audio\SDL_audiodev.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\audio\SDL_audiotypecvt.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\audio\SDL_mixer.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\audio\SDL_wave.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\audio\aaudio\SDL_aaudio.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\audio\alsa\SDL_alsa_audio.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\audio\android\SDL_androidaudio.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\audio\arts\SDL_artsaudio.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\audio\directsound\SDL_directsound.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\audio\disk\SDL_diskaudio.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\audio\dsp\SDL_dspaudio.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\audio\dummy\SDL_dummyaudio.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\audio\emscripten\SDL_emscriptenaudio.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\audio\esd\SDL_esdaudio.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\audio\fusionsound\SDL_fsaudio.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\audio\haiku\SDL_haikuaudio.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\audio\jack\SDL_jackaudio.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\audio\n3ds\SDL_n3dsaudio.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\audio\nacl\SDL_naclaudio.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\audio\nas\SDL_nasaudio.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\audio\netbsd\SDL_netbsdaudio.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\audio\opensles\SDL_openslES.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\audio\os2\SDL_os2audio.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\audio\paudio\SDL_paudio.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\audio\pipewire\SDL_pipewire.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\audio\ps2\SDL_ps2audio.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\audio\psp\SDL_pspaudio.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\audio\pulseaudio\SDL_pulseaudio.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\audio\qsa\SDL_qsa_audio.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\audio\sndio\SDL_sndioaudio.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\audio\sun\SDL_sunaudio.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\audio\vita\SDL_vitaaudio.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\audio\wasapi\SDL_wasapi_winrt.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\audio\wasapi\SDL_wasapi.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\audio\wasapi\SDL_wasapi_win32.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\audio\winmm\SDL_winmm.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\core\android\SDL_android.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\core\freebsd\SDL_evdev_kbd_freebsd.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\core\gdk\SDL_gdk.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\core\linux\SDL_dbus.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\core\linux\SDL_evdev.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\core\linux\SDL_evdev_capabilities.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\core\linux\SDL_evdev_kbd.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\core\linux\SDL_fcitx.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\core\linux\SDL_ibus.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\core\linux\SDL_ime.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\core\linux\SDL_sandbox.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\core\linux\SDL_threadprio.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\core\linux\SDL_udev.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\core\openbsd\SDL_wscons_kbd.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\core\openbsd\SDL_wscons_mouse.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\core\os2\SDL_os2.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\core\os2\geniconv\geniconv.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\core\os2\geniconv\os2cp.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\core\os2\geniconv\os2iconv.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\core\os2\geniconv\sys2utf8.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\core\os2\geniconv\test.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\core\unix\SDL_poll.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\core\windows\SDL_hid.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\core\windows\SDL_immdevice.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\core\windows\SDL_windows.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\core\windows\SDL_xinput.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\core\winrt\SDL_winrtapp_common.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\core\winrt\SDL_winrtapp_direct3d.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\core\winrt\SDL_winrtapp_xaml.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\cpuinfo\SDL_cpuinfo.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\dynapi\SDL_dynapi.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\events\imKStoUCS.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\events\SDL_clipboardevents.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\events\SDL_displayevents.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\events\SDL_dropevents.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\events\SDL_events.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\events\SDL_gesture.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\events\SDL_keyboard.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\events\SDL_keysym_to_scancode.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\events\SDL_mouse.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\events\SDL_quit.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\events\SDL_scancode_tables.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\events\SDL_touch.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\events\SDL_windowevents.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\file\SDL_rwops.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\file\n3ds\SDL_rwopsromfs.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\filesystem\android\SDL_sysfilesystem.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\filesystem\dummy\SDL_sysfilesystem.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\filesystem\emscripten\SDL_sysfilesystem.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\filesystem\haiku\SDL_sysfilesystem.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\filesystem\n3ds\SDL_sysfilesystem.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\filesystem\nacl\SDL_sysfilesystem.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\filesystem\os2\SDL_sysfilesystem.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\filesystem\ps2\SDL_sysfilesystem.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\filesystem\psp\SDL_sysfilesystem.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\filesystem\riscos\SDL_sysfilesystem.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\filesystem\unix\SDL_sysfilesystem.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\filesystem\vita\SDL_sysfilesystem.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\filesystem\windows\SDL_sysfilesystem.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\filesystem\winrt\SDL_sysfilesystem.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\haptic\SDL_haptic.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\haptic\android\SDL_syshaptic.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\haptic\darwin\SDL_syshaptic.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\haptic\dummy\SDL_syshaptic.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\haptic\linux\SDL_syshaptic.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\haptic\windows\SDL_dinputhaptic.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\haptic\windows\SDL_windowshaptic.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\haptic\windows\SDL_xinputhaptic.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\hidapi\SDL_hidapi.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\hidapi\android\hid.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\hidapi\hidtest\hidtest.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\hidapi\libusb\hidusb.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\hidapi\libusb\hid.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\hidapi\linux\hidraw.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\hidapi\linux\hid.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\hidapi\mac\hid.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\hidapi\testgui\mac_support.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\hidapi\testgui\test.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\hidapi\windows\hid.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\joystick\controller_type.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\joystick\SDL_gamecontroller.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\joystick\SDL_joystick.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\joystick\android\SDL_sysjoystick.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\joystick\bsd\SDL_bsdjoystick.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\joystick\darwin\SDL_iokitjoystick.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\joystick\dummy\SDL_sysjoystick.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\joystick\emscripten\SDL_sysjoystick.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\joystick\haiku\SDL_haikujoystick.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\joystick\hidapi\SDL_hidapijoystick.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\joystick\hidapi\SDL_hidapi_combined.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\joystick\hidapi\SDL_hidapi_gamecube.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\joystick\hidapi\SDL_hidapi_luna.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\joystick\hidapi\SDL_hidapi_ps3.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\joystick\hidapi\SDL_hidapi_ps4.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\joystick\hidapi\SDL_hidapi_ps5.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\joystick\hidapi\SDL_hidapi_rumble.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\joystick\hidapi\SDL_hidapi_shield.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\joystick\hidapi\SDL_hidapi_stadia.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\joystick\hidapi\SDL_hidapi_steam.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\joystick\hidapi\SDL_hidapi_switch.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\joystick\hidapi\SDL_hidapi_wii.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\joystick\hidapi\SDL_hidapi_xbox360.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\joystick\hidapi\SDL_hidapi_xbox360w.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\joystick\hidapi\SDL_hidapi_xboxone.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\joystick\linux\SDL_sysjoystick.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\joystick\n3ds\SDL_sysjoystick.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\joystick\os2\SDL_os2joystick.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\joystick\ps2\SDL_sysjoystick.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\joystick\psp\SDL_sysjoystick.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\joystick\steam\SDL_steamcontroller.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\joystick\virtual\SDL_virtualjoystick.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\joystick\vita\SDL_sysjoystick.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\joystick\windows\SDL_dinputjoystick.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\joystick\windows\SDL_rawinputjoystick.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\joystick\windows\SDL_windowsjoystick.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\joystick\windows\SDL_windows_gaming_input.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\joystick\windows\SDL_xinputjoystick.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\libm\e_atan2.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\libm\e_exp.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\libm\e_fmod.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\libm\e_log.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\libm\e_log10.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\libm\e_pow.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\libm\e_rem_pio2.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\libm\e_sqrt.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\libm\k_cos.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\libm\k_rem_pio2.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\libm\k_sin.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\libm\k_tan.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\libm\s_atan.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\libm\s_copysign.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\libm\s_cos.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\libm\s_fabs.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\libm\s_floor.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\libm\s_scalbn.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\libm\s_sin.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\libm\s_tan.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\loadso\dlopen\SDL_sysloadso.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\loadso\dummy\SDL_sysloadso.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\loadso\os2\SDL_sysloadso.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\loadso\windows\SDL_sysloadso.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\locale\SDL_locale.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\locale\android\SDL_syslocale.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\locale\dummy\SDL_syslocale.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\locale\emscripten\SDL_syslocale.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\locale\haiku\SDL_syslocale.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\locale\n3ds\SDL_syslocale.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\locale\unix\SDL_syslocale.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\locale\vita\SDL_syslocale.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\locale\windows\SDL_syslocale.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\locale\winrt\SDL_syslocale.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\main\android\SDL_android_main.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\main\dummy\SDL_dummy_main.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\main\gdk\SDL_gdk_main.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\main\haiku\SDL_BeApp.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\main\n3ds\SDL_n3ds_main.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\main\nacl\SDL_nacl_main.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\main\ngage\SDL_ngage_main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\main\ps2\SDL_ps2_main.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\main\psp\SDL_psp_main.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\main\uikit\SDL_uikit_main.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\main\windows\SDL_windows_main.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\main\winrt\SDL_winrt_main_NonXAML.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\misc\SDL_url.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\misc\android\SDL_sysurl.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\misc\dummy\SDL_sysurl.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\misc\emscripten\SDL_sysurl.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\misc\haiku\SDL_sysurl.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\misc\riscos\SDL_sysurl.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\misc\unix\SDL_sysurl.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\misc\vita\SDL_sysurl.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\misc\windows\SDL_sysurl.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\misc\winrt\SDL_sysurl.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\power\SDL_power.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\power\android\SDL_syspower.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\power\emscripten\SDL_syspower.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\power\haiku\SDL_syspower.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\power\linux\SDL_syspower.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\power\macosx\SDL_syspower.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\power\n3ds\SDL_syspower.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\power\psp\SDL_syspower.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\power\vita\SDL_syspower.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\power\windows\SDL_syspower.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\power\winrt\SDL_syspower.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\render\SDL_d3dmath.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\render\SDL_render.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\render\SDL_yuv_sw.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\render\direct3d\SDL_render_d3d.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\render\direct3d\SDL_shaders_d3d.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\render\direct3d11\SDL_render_winrt.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\render\direct3d11\SDL_render_d3d11.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\render\direct3d11\SDL_shaders_d3d11.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\render\direct3d12\SDL_render_d3d12_xbox.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\render\direct3d12\SDL_shaders_d3d12_xboxone.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\render\direct3d12\SDL_shaders_d3d12_xboxseries.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\render\direct3d12\SDL_render_d3d12.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\render\direct3d12\SDL_shaders_d3d12.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\render\opengl\SDL_render_gl.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\render\opengl\SDL_shaders_gl.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\render\opengles\SDL_render_gles.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\render\opengles2\SDL_render_gles2.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\render\opengles2\SDL_shaders_gles2.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\render\ps2\SDL_render_ps2.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\render\psp\SDL_render_psp.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\render\software\SDL_blendfillrect.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\render\software\SDL_blendline.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\render\software\SDL_blendpoint.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\render\software\SDL_drawline.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\render\software\SDL_drawpoint.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\render\software\SDL_render_sw.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\render\software\SDL_rotate.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\render\software\SDL_triangle.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\render\vitagxm\SDL_render_vita_gxm.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\render\vitagxm\SDL_render_vita_gxm_memory.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\render\vitagxm\SDL_render_vita_gxm_tools.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\sensor\SDL_sensor.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\sensor\android\SDL_androidsensor.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\sensor\dummy\SDL_dummysensor.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\sensor\n3ds\SDL_n3dssensor.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\sensor\vita\SDL_vitasensor.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\sensor\windows\SDL_windowssensor.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\stdlib\SDL_crc16.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\stdlib\SDL_crc32.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\stdlib\SDL_getenv.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\stdlib\SDL_iconv.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\stdlib\SDL_malloc.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\stdlib\SDL_mslibc.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\stdlib\SDL_qsort.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\stdlib\SDL_stdlib.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\stdlib\SDL_string.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\stdlib\SDL_strtokr.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\test\SDL_test_assert.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\test\SDL_test_common.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\test\SDL_test_compare.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\test\SDL_test_crc32.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\test\SDL_test_font.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\test\SDL_test_fuzzer.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\test\SDL_test_harness.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\test\SDL_test_imageBlit.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\test\SDL_test_imageBlitBlend.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\test\SDL_test_imageFace.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\test\SDL_test_imagePrimitives.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\test\SDL_test_imagePrimitivesBlend.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\test\SDL_test_log.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\test\SDL_test_md5.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\test\SDL_test_memory.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\test\SDL_test_random.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\thread\SDL_thread.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\thread\generic\SDL_syscond.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\thread\generic\SDL_sysmutex.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\thread\generic\SDL_syssem.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\thread\generic\SDL_systhread.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\thread\generic\SDL_systls.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\thread\n3ds\SDL_syscond.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\thread\n3ds\SDL_sysmutex.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\thread\n3ds\SDL_syssem.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\thread\n3ds\SDL_systhread.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\thread\ngage\SDL_sysmutex.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\thread\ngage\SDL_syssem.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\thread\ngage\SDL_systhread.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\thread\os2\SDL_sysmutex.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\thread\os2\SDL_syssem.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\thread\os2\SDL_systhread.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\thread\os2\SDL_systls.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\thread\ps2\SDL_syssem.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\thread\ps2\SDL_systhread.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\thread\psp\SDL_syscond.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\thread\psp\SDL_sysmutex.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\thread\psp\SDL_syssem.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\thread\psp\SDL_systhread.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\thread\pthread\SDL_syscond.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\thread\pthread\SDL_sysmutex.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\thread\pthread\SDL_syssem.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\thread\pthread\SDL_systhread.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\thread\pthread\SDL_systls.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\thread\stdcpp\SDL_syscond.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\thread\stdcpp\SDL_sysmutex.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\thread\stdcpp\SDL_systhread.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\thread\vita\SDL_syscond.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\thread\vita\SDL_sysmutex.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\thread\vita\SDL_syssem.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\thread\vita\SDL_systhread.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\thread\windows\SDL_syscond_cv.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\thread\windows\SDL_sysmutex.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\thread\windows\SDL_syssem.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\thread\windows\SDL_systhread.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\thread\windows\SDL_systls.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\timer\SDL_timer.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\timer\dummy\SDL_systimer.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\timer\haiku\SDL_systimer.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\timer\n3ds\SDL_systimer.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\timer\ngage\SDL_systimer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\timer\os2\SDL_systimer.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\timer\ps2\SDL_systimer.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\timer\psp\SDL_systimer.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\timer\unix\SDL_systimer.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\timer\vita\SDL_systimer.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\timer\windows\SDL_systimer.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\video\SDL_blit.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\video\SDL_blit_0.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\video\SDL_blit_1.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\video\SDL_blit_A.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\video\SDL_blit_auto.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\video\SDL_blit_copy.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\video\SDL_blit_N.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\video\SDL_blit_slow.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\video\SDL_bmp.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\video\SDL_clipboard.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\video\SDL_egl.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\video\SDL_fillrect.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\video\SDL_pixels.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\video\SDL_rect.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\video\SDL_RLEaccel.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\video\SDL_shape.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\video\SDL_stretch.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\video\SDL_surface.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\video\SDL_video.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\video\SDL_vulkan_utils.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\video\SDL_yuv.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\video\android\SDL_androidclipboard.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\video\android\SDL_androidevents.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\video\android\SDL_androidgl.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\video\android\SDL_androidkeyboard.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\video\android\SDL_androidmessagebox.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\video\android\SDL_androidmouse.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\video\android\SDL_androidtouch.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\video\android\SDL_androidvideo.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\video\android\SDL_androidvulkan.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\video\android\SDL_androidwindow.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\video\directfb\SDL_DirectFB_dyn.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\video\directfb\SDL_DirectFB_events.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\video\directfb\SDL_DirectFB_modes.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\video\directfb\SDL_DirectFB_mouse.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\video\directfb\SDL_DirectFB_opengl.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\video\directfb\SDL_DirectFB_render.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\video\directfb\SDL_DirectFB_shape.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\video\directfb\SDL_DirectFB_video.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\video\directfb\SDL_DirectFB_vulkan.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\video\directfb\SDL_DirectFB_window.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\video\directfb\SDL_DirectFB_WM.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\video\dummy\SDL_nullevents.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\video\dummy\SDL_nullframebuffer.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\video\dummy\SDL_nullvideo.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\video\emscripten\SDL_emscriptenevents.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\video\emscripten\SDL_emscriptenframebuffer.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\video\emscripten\SDL_emscriptenmouse.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\video\emscripten\SDL_emscriptenopengles.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\video\emscripten\SDL_emscriptenvideo.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\video\haiku\SDL_bclipboard.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\video\haiku\SDL_bevents.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\video\haiku\SDL_bframebuffer.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\video\haiku\SDL_bkeyboard.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\video\haiku\SDL_bmessagebox.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\video\haiku\SDL_bmodes.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\video\haiku\SDL_bopengl.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\video\haiku\SDL_bvideo.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\video\haiku\SDL_bwindow.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\video\kmsdrm\SDL_kmsdrmdyn.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\video\kmsdrm\SDL_kmsdrmevents.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\video\kmsdrm\SDL_kmsdrmmouse.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\video\kmsdrm\SDL_kmsdrmopengles.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\video\kmsdrm\SDL_kmsdrmvideo.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\video\kmsdrm\SDL_kmsdrmvulkan.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\video\n3ds\SDL_n3dsevents.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\video\n3ds\SDL_n3dsframebuffer.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\video\n3ds\SDL_n3dsswkb.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\video\n3ds\SDL_n3dstouch.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\video\n3ds\SDL_n3dsvideo.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\video\nacl\SDL_naclevents.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\video\nacl\SDL_naclglue.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\video\nacl\SDL_naclopengles.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\video\nacl\SDL_naclvideo.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\video\nacl\SDL_naclwindow.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\video\ngage\SDL_ngageevents.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\video\ngage\SDL_ngageframebuffer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\video\ngage\SDL_ngagevideo.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\video\ngage\SDL_ngagewindow.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\video\offscreen\SDL_offscreenevents.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\video\offscreen\SDL_offscreenframebuffer.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\video\offscreen\SDL_offscreenopengles.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\video\offscreen\SDL_offscreenvideo.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\video\offscreen\SDL_offscreenwindow.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\video\os2\SDL_os2dive.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\video\os2\SDL_os2messagebox.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\video\os2\SDL_os2mouse.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\video\os2\SDL_os2util.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\video\os2\SDL_os2video.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\video\os2\SDL_os2vman.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\video\pandora\SDL_pandora.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\video\pandora\SDL_pandora_events.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\video\ps2\SDL_ps2video.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\video\psp\SDL_pspevents.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\video\psp\SDL_pspgl.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\video\psp\SDL_pspmouse.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\video\psp\SDL_pspvideo.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\video\qnx\gl.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\video\qnx\keyboard.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\video\qnx\video.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\video\raspberry\SDL_rpievents.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\video\raspberry\SDL_rpimouse.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\video\raspberry\SDL_rpiopengles.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\video\raspberry\SDL_rpivideo.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\video\riscos\SDL_riscosevents.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\video\riscos\SDL_riscosframebuffer.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\video\riscos\SDL_riscosmessagebox.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\video\riscos\SDL_riscosmodes.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\video\riscos\SDL_riscosmouse.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\video\riscos\SDL_riscosvideo.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\video\riscos\SDL_riscoswindow.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\video\vita\SDL_vitaframebuffer.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\video\vita\SDL_vitagles.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\video\vita\SDL_vitagles_pvr.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\video\vita\SDL_vitagl_pvr.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\video\vita\SDL_vitakeyboard.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\video\vita\SDL_vitamessagebox.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\video\vita\SDL_vitamouse.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\video\vita\SDL_vitatouch.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\video\vita\SDL_vitavideo.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\video\vivante\SDL_vivanteopengles.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\video\vivante\SDL_vivanteplatform.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\video\vivante\SDL_vivantevideo.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\video\vivante\SDL_vivantevulkan.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\video\wayland\SDL_waylandclipboard.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\video\wayland\SDL_waylanddatamanager.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\video\wayland\SDL_waylanddyn.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\video\wayland\SDL_waylandevents.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\video\wayland\SDL_waylandkeyboard.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\video\wayland\SDL_waylandmessagebox.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\video\wayland\SDL_waylandmouse.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\video\wayland\SDL_waylandopengles.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\video\wayland\SDL_waylandtouch.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\video\wayland\SDL_waylandvideo.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\video\wayland\SDL_waylandvulkan.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\video\wayland\SDL_waylandwindow.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\video\windows\SDL_windowsclipboard.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\video\windows\SDL_windowsevents.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\video\windows\SDL_windowsframebuffer.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\video\windows\SDL_windowskeyboard.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\video\windows\SDL_windowsmessagebox.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\video\windows\SDL_windowsmodes.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\video\windows\SDL_windowsmouse.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\video\windows\SDL_windowsopengl.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\video\windows\SDL_windowsopengles.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\video\windows\SDL_windowsshape.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\video\windows\SDL_windowsvideo.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\video\windows\SDL_windowsvulkan.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\video\windows\SDL_windowswindow.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\video\winrt\SDL_winrtevents.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\video\winrt\SDL_winrtgamebar.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\video\winrt\SDL_winrtkeyboard.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\video\winrt\SDL_winrtmessagebox.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\video\winrt\SDL_winrtmouse.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\video\winrt\SDL_winrtopengles.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\video\winrt\SDL_winrtpointerinput.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\video\winrt\SDL_winrtvideo.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\video\x11\edid-parse.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\video\x11\SDL_x11clipboard.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\video\x11\SDL_x11dyn.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\video\x11\SDL_x11events.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\video\x11\SDL_x11framebuffer.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\video\x11\SDL_x11keyboard.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\video\x11\SDL_x11messagebox.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\video\x11\SDL_x11modes.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\video\x11\SDL_x11mouse.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\video\x11\SDL_x11opengl.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\video\x11\SDL_x11opengles.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\video\x11\SDL_x11shape.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\video\x11\SDL_x11touch.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\video\x11\SDL_x11video.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\video\x11\SDL_x11vulkan.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\video\x11\SDL_x11window.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\video\x11\SDL_x11xfixes.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\video\x11\SDL_x11xinput2.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\src\video\yuv2rgb\yuv_rgb.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\test\checkkeys.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\test\checkkeysthreads.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\test\controllermap.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\test\loopwave.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\test\loopwavequeue.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\test\testatomic.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\test\testaudiocapture.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\test\testaudiohotplug.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\test\testaudioinfo.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\test\testautomation.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\test\testautomation_audio.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\test\testautomation_clipboard.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\test\testautomation_events.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\test\testautomation_guid.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\test\testautomation_hints.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\test\testautomation_joystick.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\test\testautomation_keyboard.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\test\testautomation_main.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\test\testautomation_math.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\test\testautomation_mouse.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\test\testautomation_pixels.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\test\testautomation_platform.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\test\testautomation_rect.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\test\testautomation_render.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\test\testautomation_rwops.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\test\testautomation_sdltest.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\test\testautomation_stdlib.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\test\testautomation_surface.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\test\testautomation_syswm.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\test\testautomation_timer.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\test\testautomation_video.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\test\testbounds.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\test\testcustomcursor.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\test\testdisplayinfo.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\test\testdraw2.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\test\testdrawchessboard.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\test\testdropfile.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\test\testerror.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\test\testevdev.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\test\testfile.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\test\testfilesystem.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\test\testgamecontroller.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\test\testgeometry.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\test\testgesture.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\test\testgl2.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\test\testgles.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\test\testgles2.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\test\testgles2_sdf.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\test\testhaptic.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\test\testhittesting.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\test\testhotplug.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\test\testiconv.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\test\testime.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\test\testintersections.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\test\testjoystick.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\test\testkeys.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\test\testloadso.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\test\testlocale.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\test\testlock.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\test\testmessage.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\test\testmouse.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\test\testmultiaudio.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\test\testnative.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\test\testnativeos2.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\test\testnativew32.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\test\testnativex11.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\test\testoffscreen.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\test\testoverlay2.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\test\testplatform.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\test\testpower.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\test\testqsort.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\test\testrelative.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\test\testrendercopyex.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\test\testrendertarget.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\test\testresample.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\test\testrumble.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\test\testscale.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\test\testsem.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\test\testsensor.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\test\testshader.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\test\testshape.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\test\testsprite2.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\test\testspriteminimal.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\test\teststreaming.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\test\testsurround.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\test\testthread.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\test\testtimer.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\test\testurl.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\test\testutils.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\test\testver.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\test\testviewport.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\test\testvulkan.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\test\testwm2.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\test\testyuv.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\test\testyuv_cvt.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\test\torturethread.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\visualc-gdk\tests\testgdk\src\testgdk.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\visualtest\src\action_configparser.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\visualtest\src\harness_argparser.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\visualtest\src\mischelper.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\visualtest\src\parsehelper.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\visualtest\src\rwhelper.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\visualtest\src\screenshot.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\visualtest\src\sut_configparser.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\visualtest\src\testharness.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\visualtest\src\variators.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\visualtest\src\variator_common.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\visualtest\src\variator_exhaustive.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\visualtest\src\variator_random.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\visualtest\src\linux\linux_process.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\visualtest\src\windows\windows_process.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\visualtest\src\windows\windows_screenshot.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\visualtest\unittest\testquit.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\xcode-ios\demos\src\accelerometer.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\xcode-ios\demos\src\common.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\xcode-ios\demos\src\fireworks.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\xcode-ios\demos\src\happy.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\xcode-ios\demos\src\keyboard.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\xcode-ios\demos\src\mixer.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\xcode-ios\demos\src\rectangles.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="services\sdl\xcode-ios\demos\src\touch.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="widgets\createprojects\templates\CppTemplate.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="widgets\createprojects\templates\CTemplate.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="services\sdl\src\hidapi\windows\ddk_build\hidapi.def">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="services\sdl\build\cmakefiles\3.25.1\CMakeDetermineCompilerABI_C.bin">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="services\sdl\build\cmakefiles\3.25.1\CMakeDetermineCompilerABI_CXX.bin">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="services\sdl\test\nacl\index.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="services\sdl\build\include\begin_code.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\build\include\close_code.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\build\include\SDL.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\build\include\SDL_assert.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\build\include\SDL_atomic.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\build\include\SDL_audio.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\build\include\SDL_bits.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\build\include\SDL_blendmode.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\build\include\SDL_clipboard.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\build\include\SDL_copying.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\build\include\SDL_cpuinfo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\build\include\SDL_egl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\build\include\SDL_endian.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\build\include\SDL_error.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\build\include\SDL_events.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\build\include\SDL_filesystem.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\build\include\SDL_gamecontroller.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\build\include\SDL_gesture.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\build\include\SDL_guid.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\build\include\SDL_haptic.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\build\include\SDL_hidapi.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\build\include\SDL_hints.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\build\include\SDL_joystick.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\build\include\SDL_keyboard.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\build\include\SDL_keycode.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\build\include\SDL_loadso.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\build\include\SDL_locale.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\build\include\SDL_log.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\build\include\SDL_main.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\build\include\SDL_messagebox.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\build\include\SDL_metal.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\build\include\SDL_misc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\build\include\SDL_mouse.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\build\include\SDL_mutex.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\build\include\SDL_name.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\build\include\SDL_opengl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\build\include\SDL_opengles.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\build\include\SDL_opengles2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\build\include\SDL_opengles2_gl2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\build\include\SDL_opengles2_gl2ext.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\build\include\SDL_opengles2_gl2platform.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\build\include\SDL_opengles2_khrplatform.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\build\include\SDL_opengl_glext.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\build\include\SDL_pixels.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\build\include\SDL_platform.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\build\include\SDL_power.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\build\include\SDL_quit.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\build\include\SDL_rect.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\build\include\SDL_render.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\build\include\SDL_revision.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\build\include\SDL_rwops.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\build\include\SDL_scancode.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\build\include\SDL_sensor.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\build\include\SDL_shape.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\build\include\SDL_stdinc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\build\include\SDL_surface.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\build\include\SDL_system.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\build\include\SDL_syswm.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\build\include\SDL_test.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\build\include\SDL_test_assert.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\build\include\SDL_test_common.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\build\include\SDL_test_compare.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\build\include\SDL_test_crc32.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\build\include\SDL_test_font.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\build\include\SDL_test_fuzzer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\build\include\SDL_test_harness.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\build\include\SDL_test_images.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\build\include\SDL_test_log.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\build\include\SDL_test_md5.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\build\include\SDL_test_memory.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\build\include\SDL_test_random.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\build\include\SDL_thread.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\build\include\SDL_timer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\build\include\SDL_touch.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\build\include\SDL_types.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\build\include\SDL_version.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\build\include\SDL_video.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\build\include\SDL_vulkan.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\build\include-config-release\SDL_config.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\include\begin_code.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\include\close_code.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\include\SDL.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\include\SDL_assert.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\include\SDL_atomic.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\include\SDL_audio.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\include\SDL_bits.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\include\SDL_blendmode.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\include\SDL_clipboard.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\include\SDL_config.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\include\SDL_config_android.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\include\SDL_config_emscripten.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\include\SDL_config_iphoneos.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\include\SDL_config_macosx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\include\SDL_config_minimal.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\include\SDL_config_ngage.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\include\SDL_config_os2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\include\SDL_config_pandora.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\include\SDL_config_windows.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\include\SDL_config_wingdk.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\include\SDL_config_winrt.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\include\SDL_config_xbox.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\include\SDL_copying.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\include\SDL_cpuinfo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\include\SDL_egl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\include\SDL_endian.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\include\SDL_error.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\include\SDL_events.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\include\SDL_filesystem.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\include\SDL_gamecontroller.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\include\SDL_gesture.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\include\SDL_guid.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\include\SDL_haptic.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\include\SDL_hidapi.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\include\SDL_hints.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\include\SDL_joystick.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\include\SDL_keyboard.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\include\SDL_keycode.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\include\SDL_loadso.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\include\SDL_locale.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\include\SDL_log.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\include\SDL_main.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\include\SDL_messagebox.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\include\SDL_metal.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\include\SDL_misc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\include\SDL_mouse.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\include\SDL_mutex.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\include\SDL_name.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\include\SDL_opengl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\include\SDL_opengles.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\include\SDL_opengles2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\include\SDL_opengles2_gl2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\include\SDL_opengles2_gl2ext.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\include\SDL_opengles2_gl2platform.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\include\SDL_opengles2_khrplatform.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\include\SDL_opengl_glext.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\include\SDL_pixels.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\include\SDL_platform.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\include\SDL_power.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\include\SDL_quit.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\include\SDL_rect.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\include\SDL_render.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\include\SDL_revision.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\include\SDL_rwops.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\include\SDL_scancode.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\include\SDL_sensor.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\include\SDL_shape.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\include\SDL_stdinc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\include\SDL_surface.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\include\SDL_system.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\include\SDL_syswm.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\include\SDL_test.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\include\SDL_test_assert.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\include\SDL_test_common.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\include\SDL_test_compare.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\include\SDL_test_crc32.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\include\SDL_test_font.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\include\SDL_test_fuzzer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\include\SDL_test_harness.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\include\SDL_test_images.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\include\SDL_test_log.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\include\SDL_test_md5.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\include\SDL_test_memory.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\include\SDL_test_random.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\include\SDL_thread.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\include\SDL_timer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\include\SDL_touch.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\include\SDL_types.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\include\SDL_version.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\include\SDL_video.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\include\SDL_vulkan.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\SDL_assert_c.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\SDL_dataqueue.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\SDL_error_c.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\SDL_hints_c.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\SDL_internal.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\SDL_list.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\SDL_log_c.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\SDL_utils_c.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\audio\SDL_audiodev_c.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\audio\SDL_audio_c.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\audio\SDL_audio_channel_converters.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\audio\SDL_audio_resampler_filter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\audio\SDL_sysaudio.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\audio\SDL_wave.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\audio\aaudio\SDL_aaudio.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\audio\aaudio\SDL_aaudiofuncs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\audio\alsa\SDL_alsa_audio.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\audio\android\SDL_androidaudio.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\audio\arts\SDL_artsaudio.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\audio\coreaudio\SDL_coreaudio.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\audio\directsound\SDL_directsound.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\audio\disk\SDL_diskaudio.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\audio\dsp\SDL_dspaudio.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\audio\dummy\SDL_dummyaudio.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\audio\emscripten\SDL_emscriptenaudio.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\audio\esd\SDL_esdaudio.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\audio\fusionsound\SDL_fsaudio.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\audio\haiku\SDL_haikuaudio.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\audio\jack\SDL_jackaudio.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\audio\n3ds\SDL_n3dsaudio.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\audio\nacl\SDL_naclaudio.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\audio\nas\SDL_nasaudio.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\audio\netbsd\SDL_netbsdaudio.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\audio\opensles\SDL_openslES.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\audio\os2\SDL_os2audio.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\audio\paudio\SDL_paudio.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\audio\pipewire\SDL_pipewire.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\audio\ps2\SDL_ps2audio.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\audio\psp\SDL_pspaudio.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\audio\pulseaudio\SDL_pulseaudio.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\audio\qsa\SDL_qsa_audio.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\audio\sndio\SDL_sndioaudio.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\audio\sun\SDL_sunaudio.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\audio\vita\SDL_vitaaudio.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\audio\wasapi\SDL_wasapi.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\audio\winmm\SDL_winmm.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\core\android\SDL_android.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\core\freebsd\SDL_evdev_kbd_default_keyaccmap.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\core\gdk\SDL_gdk.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\core\linux\SDL_dbus.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\core\linux\SDL_evdev.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\core\linux\SDL_evdev_capabilities.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\core\linux\SDL_evdev_kbd.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\core\linux\SDL_evdev_kbd_default_accents.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\core\linux\SDL_evdev_kbd_default_keymap.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\core\linux\SDL_fcitx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\core\linux\SDL_ibus.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\core\linux\SDL_ime.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\core\linux\SDL_sandbox.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\core\linux\SDL_udev.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\core\openbsd\SDL_wscons.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\core\os2\SDL_os2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\core\os2\geniconv\geniconv.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\core\os2\geniconv\iconv.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\core\os2\geniconv\os2cp.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\core\unix\SDL_poll.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\core\windows\SDL_directx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\core\windows\SDL_hid.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\core\windows\SDL_immdevice.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\core\windows\SDL_windows.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\core\windows\SDL_xinput.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\core\winrt\SDL_winrtapp_common.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\core\winrt\SDL_winrtapp_direct3d.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\core\winrt\SDL_winrtapp_xaml.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\dynapi\SDL_dynapi.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\dynapi\SDL_dynapi_overrides.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\dynapi\SDL_dynapi_procs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\events\blank_cursor.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\events\default_cursor.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\events\imKStoUCS.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\events\scancodes_ascii.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\events\scancodes_darwin.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\events\scancodes_linux.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\events\scancodes_windows.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\events\scancodes_xfree86.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\events\SDL_clipboardevents_c.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\events\SDL_displayevents_c.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\events\SDL_dropevents_c.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\events\SDL_events_c.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\events\SDL_gesture_c.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\events\SDL_keyboard_c.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\events\SDL_keysym_to_scancode_c.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\events\SDL_mouse_c.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\events\SDL_scancode_tables_c.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\events\SDL_touch_c.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\events\SDL_windowevents_c.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\file\cocoa\SDL_rwopsbundlesupport.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\file\n3ds\SDL_rwopsromfs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\haptic\SDL_haptic_c.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\haptic\SDL_syshaptic.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\haptic\android\SDL_syshaptic_c.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\haptic\darwin\SDL_syshaptic_c.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\haptic\windows\SDL_dinputhaptic_c.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\haptic\windows\SDL_windowshaptic_c.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\haptic\windows\SDL_xinputhaptic_c.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\hidapi\SDL_hidapi_c.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\hidapi\hidapi\hidapi.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\hidapi\testgui\mac_support.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\joystick\controller_type.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\joystick\SDL_gamecontrollerdb.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\joystick\SDL_joystick_c.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\joystick\SDL_sysjoystick.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\joystick\usb_ids.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\joystick\android\SDL_sysjoystick_c.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\joystick\darwin\SDL_iokitjoystick_c.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\joystick\emscripten\SDL_sysjoystick_c.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\joystick\hidapi\SDL_hidapijoystick_c.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\joystick\hidapi\SDL_hidapi_nintendo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\joystick\hidapi\SDL_hidapi_rumble.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\joystick\hidapi\steam\controller_constants.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\joystick\hidapi\steam\controller_structs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\joystick\iphoneos\SDL_mfijoystick_c.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\joystick\linux\SDL_sysjoystick_c.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\joystick\steam\SDL_steamcontroller.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\joystick\virtual\SDL_virtualjoystick_c.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\joystick\windows\SDL_dinputjoystick_c.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\joystick\windows\SDL_rawinputjoystick_c.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\joystick\windows\SDL_windowsjoystick_c.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\joystick\windows\SDL_xinputjoystick_c.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\libm\math_libm.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\libm\math_private.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\locale\SDL_syslocale.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\main\haiku\SDL_BApp.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\main\haiku\SDL_BeApp.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\misc\SDL_sysurl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\power\SDL_syspower.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\power\uikit\SDL_syspower.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\render\SDL_d3dmath.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\render\SDL_sysrender.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\render\SDL_yuv_sw_c.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\render\direct3d\SDL_shaders_d3d.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\render\direct3d11\SDL_render_winrt.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\render\direct3d11\SDL_shaders_d3d11.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\render\direct3d12\SDL_render_d3d12_xbox.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\render\direct3d12\SDL_shaders_d3d12.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\render\metal\SDL_shaders_metal_ios.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\render\metal\SDL_shaders_metal_iphonesimulator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\render\metal\SDL_shaders_metal_osx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\render\metal\SDL_shaders_metal_tvos.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\render\metal\SDL_shaders_metal_tvsimulator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\render\opengl\SDL_glfuncs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\render\opengl\SDL_shaders_gl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\render\opengles\SDL_glesfuncs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\render\opengles2\SDL_gles2funcs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\render\opengles2\SDL_shaders_gles2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\render\software\SDL_blendfillrect.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\render\software\SDL_blendline.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\render\software\SDL_blendpoint.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\render\software\SDL_draw.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\render\software\SDL_drawline.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\render\software\SDL_drawpoint.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\render\software\SDL_render_sw_c.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\render\software\SDL_rotate.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\render\software\SDL_triangle.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\render\vitagxm\SDL_render_vita_gxm_memory.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\render\vitagxm\SDL_render_vita_gxm_shaders.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\render\vitagxm\SDL_render_vita_gxm_tools.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\render\vitagxm\SDL_render_vita_gxm_types.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\sensor\SDL_sensor_c.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\sensor\SDL_syssensor.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\sensor\android\SDL_androidsensor.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\sensor\coremotion\SDL_coremotionsensor.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\sensor\dummy\SDL_dummysensor.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\sensor\vita\SDL_vitasensor.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\sensor\windows\SDL_windowssensor.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\stdlib\SDL_vacopy.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\thread\SDL_systhread.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\thread\SDL_thread_c.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\thread\generic\SDL_syscond_c.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\thread\generic\SDL_sysmutex_c.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\thread\generic\SDL_systhread_c.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\thread\n3ds\SDL_sysmutex_c.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\thread\n3ds\SDL_systhread_c.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\thread\ngage\SDL_systhread_c.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\thread\os2\SDL_systhread_c.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\thread\os2\SDL_systls_c.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\thread\ps2\SDL_systhread_c.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\thread\psp\SDL_sysmutex_c.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\thread\psp\SDL_systhread_c.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\thread\pthread\SDL_sysmutex_c.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\thread\pthread\SDL_systhread_c.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\thread\stdcpp\SDL_sysmutex_c.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\thread\stdcpp\SDL_systhread_c.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\thread\vita\SDL_sysmutex_c.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\thread\vita\SDL_systhread_c.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\thread\windows\SDL_sysmutex_c.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\thread\windows\SDL_systhread_c.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\timer\SDL_timer_c.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\SDL_blit.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\SDL_blit_auto.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\SDL_blit_copy.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\SDL_blit_slow.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\SDL_egl_c.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\SDL_pixels_c.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\SDL_rect_c.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\SDL_rect_impl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\SDL_RLEaccel_c.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\SDL_shape_internals.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\SDL_sysvideo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\SDL_vulkan_internal.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\SDL_yuv_c.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\android\SDL_androidclipboard.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\android\SDL_androidevents.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\android\SDL_androidgl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\android\SDL_androidkeyboard.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\android\SDL_androidmessagebox.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\android\SDL_androidmouse.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\android\SDL_androidtouch.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\android\SDL_androidvideo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\android\SDL_androidvulkan.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\android\SDL_androidwindow.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\arm\pixman-arm-asm.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\arm\pixman-arm-neon-asm.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\arm\pixman-arm-simd-asm.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\cocoa\SDL_cocoaclipboard.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\cocoa\SDL_cocoaevents.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\cocoa\SDL_cocoakeyboard.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\cocoa\SDL_cocoamessagebox.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\cocoa\SDL_cocoametalview.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\cocoa\SDL_cocoamodes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\cocoa\SDL_cocoamouse.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\cocoa\SDL_cocoaopengl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\cocoa\SDL_cocoaopengles.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\cocoa\SDL_cocoashape.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\cocoa\SDL_cocoavideo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\cocoa\SDL_cocoavulkan.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\cocoa\SDL_cocoawindow.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\directfb\SDL_DirectFB_dyn.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\directfb\SDL_DirectFB_events.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\directfb\SDL_DirectFB_modes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\directfb\SDL_DirectFB_mouse.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\directfb\SDL_DirectFB_opengl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\directfb\SDL_DirectFB_render.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\directfb\SDL_DirectFB_shape.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\directfb\SDL_DirectFB_video.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\directfb\SDL_DirectFB_vulkan.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\directfb\SDL_DirectFB_window.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\directfb\SDL_DirectFB_WM.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\dummy\SDL_nullevents_c.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\dummy\SDL_nullframebuffer_c.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\dummy\SDL_nullvideo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\emscripten\SDL_emscriptenevents.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\emscripten\SDL_emscriptenframebuffer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\emscripten\SDL_emscriptenmouse.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\emscripten\SDL_emscriptenopengles.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\emscripten\SDL_emscriptenvideo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\haiku\SDL_BApp.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\haiku\SDL_bclipboard.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\haiku\SDL_bevents.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\haiku\SDL_bframebuffer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\haiku\SDL_bkeyboard.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\haiku\SDL_bmessagebox.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\haiku\SDL_bmodes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\haiku\SDL_bopengl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\haiku\SDL_bvideo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\haiku\SDL_BWin.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\haiku\SDL_bwindow.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\khronos\egl\egl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\khronos\egl\eglext.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\khronos\egl\eglplatform.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\khronos\gles2\gl2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\khronos\gles2\gl2ext.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\khronos\gles2\gl2platform.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\khronos\khr\khrplatform.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\khronos\vulkan\vk_icd.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\khronos\vulkan\vk_layer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\khronos\vulkan\vk_platform.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\khronos\vulkan\vk_sdk_platform.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\khronos\vulkan\vulkan.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\khronos\vulkan\vulkan_android.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\khronos\vulkan\vulkan_beta.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\khronos\vulkan\vulkan_core.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\khronos\vulkan\vulkan_directfb.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\khronos\vulkan\vulkan_fuchsia.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\khronos\vulkan\vulkan_ggp.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\khronos\vulkan\vulkan_ios.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\khronos\vulkan\vulkan_macos.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\khronos\vulkan\vulkan_metal.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\khronos\vulkan\vulkan_screen.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\khronos\vulkan\vulkan_vi.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\khronos\vulkan\vulkan_wayland.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\khronos\vulkan\vulkan_win32.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\khronos\vulkan\vulkan_xcb.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\khronos\vulkan\vulkan_xlib.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\khronos\vulkan\vulkan_xlib_xrandr.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\khronos\vulkan\vulkan.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\khronos\vulkan\vulkan_enums.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\khronos\vulkan\vulkan_format_traits.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\khronos\vulkan\vulkan_funcs.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\khronos\vulkan\vulkan_handles.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\khronos\vulkan\vulkan_hash.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\khronos\vulkan\vulkan_raii.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\khronos\vulkan\vulkan_static_assertions.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\khronos\vulkan\vulkan_structs.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\khronos\vulkan\vulkan_to_string.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\kmsdrm\SDL_kmsdrmdyn.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\kmsdrm\SDL_kmsdrmevents.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\kmsdrm\SDL_kmsdrmmouse.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\kmsdrm\SDL_kmsdrmopengles.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\kmsdrm\SDL_kmsdrmsym.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\kmsdrm\SDL_kmsdrmvideo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\kmsdrm\SDL_kmsdrmvulkan.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\n3ds\SDL_n3dsevents_c.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\n3ds\SDL_n3dsframebuffer_c.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\n3ds\SDL_n3dsswkb.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\n3ds\SDL_n3dstouch.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\n3ds\SDL_n3dsvideo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\nacl\SDL_naclevents_c.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\nacl\SDL_naclopengles.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\nacl\SDL_naclvideo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\nacl\SDL_naclwindow.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\ngage\SDL_ngageevents_c.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\ngage\SDL_ngageframebuffer_c.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\ngage\SDL_ngagevideo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\ngage\SDL_ngagewindow.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\offscreen\SDL_offscreenevents_c.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\offscreen\SDL_offscreenframebuffer_c.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\offscreen\SDL_offscreenopengles.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\offscreen\SDL_offscreenvideo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\offscreen\SDL_offscreenwindow.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\os2\SDL_gradd.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\os2\SDL_os2messagebox.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\os2\SDL_os2mouse.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\os2\SDL_os2output.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\os2\SDL_os2util.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\os2\SDL_os2video.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\pandora\SDL_pandora.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\pandora\SDL_pandora_events.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\ps2\SDL_ps2video.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\psp\SDL_pspevents_c.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\psp\SDL_pspgl_c.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\psp\SDL_pspmouse_c.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\psp\SDL_pspvideo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\qnx\sdl_qnx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\raspberry\SDL_rpievents_c.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\raspberry\SDL_rpimouse.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\raspberry\SDL_rpiopengles.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\raspberry\SDL_rpivideo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\riscos\scancodes_riscos.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\riscos\SDL_riscosdefs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\riscos\SDL_riscosevents_c.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\riscos\SDL_riscosframebuffer_c.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\riscos\SDL_riscosmessagebox.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\riscos\SDL_riscosmodes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\riscos\SDL_riscosmouse.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\riscos\SDL_riscosvideo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\riscos\SDL_riscoswindow.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\uikit\SDL_uikitappdelegate.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\uikit\SDL_uikitclipboard.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\uikit\SDL_uikitevents.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\uikit\SDL_uikitmessagebox.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\uikit\SDL_uikitmetalview.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\uikit\SDL_uikitmodes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\uikit\SDL_uikitopengles.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\uikit\SDL_uikitopenglview.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\uikit\SDL_uikitvideo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\uikit\SDL_uikitview.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\uikit\SDL_uikitviewcontroller.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\uikit\SDL_uikitvulkan.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\uikit\SDL_uikitwindow.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\vita\SDL_vitaframebuffer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\vita\SDL_vitagles_c.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\vita\SDL_vitagles_pvr_c.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\vita\SDL_vitagl_pvr_c.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\vita\SDL_vitakeyboard.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\vita\SDL_vitamessagebox.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\vita\SDL_vitamouse_c.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\vita\SDL_vitatouch.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\vita\SDL_vitavideo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\vivante\SDL_vivanteopengles.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\vivante\SDL_vivanteplatform.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\vivante\SDL_vivantevideo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\vivante\SDL_vivantevulkan.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\wayland\SDL_waylandclipboard.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\wayland\SDL_waylanddatamanager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\wayland\SDL_waylanddyn.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\wayland\SDL_waylandevents_c.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\wayland\SDL_waylandkeyboard.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\wayland\SDL_waylandmessagebox.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\wayland\SDL_waylandmouse.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\wayland\SDL_waylandopengles.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\wayland\SDL_waylandsym.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\wayland\SDL_waylandtouch.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\wayland\SDL_waylandvideo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\wayland\SDL_waylandvulkan.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\wayland\SDL_waylandwindow.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\windows\SDL_msctf.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\windows\SDL_vkeys.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\windows\SDL_windowsclipboard.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\windows\SDL_windowsevents.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\windows\SDL_windowsframebuffer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\windows\SDL_windowskeyboard.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\windows\SDL_windowsmessagebox.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\windows\SDL_windowsmodes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\windows\SDL_windowsmouse.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\windows\SDL_windowsopengl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\windows\SDL_windowsopengles.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\windows\SDL_windowsshape.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\windows\SDL_windowsvideo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\windows\SDL_windowsvulkan.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\windows\SDL_windowswindow.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\windows\wmmsg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\winrt\SDL_winrtevents_c.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\winrt\SDL_winrtgamebar_cpp.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\winrt\SDL_winrtmessagebox.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\winrt\SDL_winrtmouse_c.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\winrt\SDL_winrtopengles.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\winrt\SDL_winrtvideo_cpp.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\x11\edid.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\x11\SDL_x11clipboard.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\x11\SDL_x11dyn.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\x11\SDL_x11events.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\x11\SDL_x11framebuffer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\x11\SDL_x11keyboard.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\x11\SDL_x11messagebox.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\x11\SDL_x11modes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\x11\SDL_x11mouse.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\x11\SDL_x11opengl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\x11\SDL_x11opengles.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\x11\SDL_x11shape.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\x11\SDL_x11sym.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\x11\SDL_x11touch.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\x11\SDL_x11video.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\x11\SDL_x11vulkan.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\x11\SDL_x11window.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\x11\SDL_x11xfixes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\x11\SDL_x11xinput2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\yuv2rgb\yuv_rgb.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\yuv2rgb\yuv_rgb_lsx_func.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\yuv2rgb\yuv_rgb_sse_func.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\src\video\yuv2rgb\yuv_rgb_std_func.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\test\testautomation_suites.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\test\testnative.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\test\testutils.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\test\testyuv_cvt.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\visualtest\include\SDL_visualtest_action_configparser.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\visualtest\include\SDL_visualtest_exhaustive_variator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\visualtest\include\SDL_visualtest_harness_argparser.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\visualtest\include\SDL_visualtest_mischelper.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\visualtest\include\SDL_visualtest_parsehelper.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\visualtest\include\SDL_visualtest_process.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\visualtest\include\SDL_visualtest_random_variator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\visualtest\include\SDL_visualtest_rwhelper.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\visualtest\include\SDL_visualtest_screenshot.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\visualtest\include\SDL_visualtest_sut_configparser.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\visualtest\include\SDL_visualtest_variators.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\visualtest\include\SDL_visualtest_variator_common.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="services\sdl\xcode-ios\demos\src\common.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="services\sdl\src\main\windows\version.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+    <ResourceCompile Include="services\sdl\src\main\winrt\SDL2-WinRTResources.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>

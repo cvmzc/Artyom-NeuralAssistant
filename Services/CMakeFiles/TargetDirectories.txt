@@ -1,3 +1,0 @@
-C:/Users/Blackflame576/Documents/Blackflame576/DigitalBit/Artyom-NeuralAssistant/Services/CMakeFiles/EventSystem.dir
-C:/Users/Blackflame576/Documents/Blackflame576/DigitalBit/Artyom-NeuralAssistant/Services/CMakeFiles/edit_cache.dir
-C:/Users/Blackflame576/Documents/Blackflame576/DigitalBit/Artyom-NeuralAssistant/Services/CMakeFiles/rebuild_cache.dir
