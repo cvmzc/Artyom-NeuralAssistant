@@ -23,7 +23,7 @@ loguru==0.6.0
 matplotlib==3.5.3
 mplcyberpunk==0.6.0
 num2words==0.5.12
-numpy==1.22.0
+numpy==1.22.2
 omegaconf==2.2.3
 packaging==21.3
 Pillow==9.3.0
