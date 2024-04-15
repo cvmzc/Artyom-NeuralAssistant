@@ -23,7 +23,7 @@ loguru==0.6.0
 matplotlib==3.5.3
 mplcyberpunk==0.6.0
 num2words==0.5.12
-numpy==1.22.0
+numpy==1.22.2
 omegaconf==2.2.3
 packaging==21.3
 Pillow==9.3.0
@@ -38,7 +38,7 @@ ratelim==0.1.6
 requests==2.28.1
 rich==12.6.0
 scikit-learn==1.0.2
-scipy==1.7.3
+scipy==1.10.0rc1
 silero==0.4.1
 six==1.16.0
 sklearn==0.0
@@ -58,3 +58,4 @@ pygame==2.1.2
 soundfile==0.11.0
 librosa
 bs4
+numba>=0.49.0 # not directly required, pinned by Snyk to avoid a vulnerability
