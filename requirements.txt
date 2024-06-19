@@ -49,7 +49,7 @@ torch==1.13.1
 torchaudio==0.13.0
 tqdm==4.64.1
 typing-extensions==4.4.0
-urllib3==1.26.13
+urllib3==1.26.19
 vosk==0.3.44
 websockets==10.4
 win32-setctime==1.1.0
