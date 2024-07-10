@@ -53,7 +53,7 @@ urllib3==1.26.13
 vosk==0.3.44
 websockets==10.4
 win32-setctime==1.1.0
-zipp==3.11.0
+zipp==3.19.1
 pygame==2.1.2
 soundfile==0.11.0
 librosa
