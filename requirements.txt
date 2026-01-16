@@ -18,7 +18,7 @@ idna==3.4
 importlib-metadata==5.1.0
 joblib==1.2.0
 kiwisolver==1.4.4
-lief==0.12.3
+lief==0.17.2
 loguru==0.6.0
 matplotlib==3.5.3
 mplcyberpunk==0.6.0
